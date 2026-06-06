@@ -1,0 +1,4286 @@
+Line wrap
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Infinite Hunters Multi Service Pvt Ltd | Staffing &amp; RPO Solutions Pan India</title>
+    <meta name="description"
+        content="Infinite Hunters – Premier HR staffing, RPO, contract staffing, payroll, NAPS &amp; compliance solutions Pan India." />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --navy: #0a1628;
+            --navy2: #112240;
+            --dark: #060e1a;
+            --card: #0e1e3a;
+            --gold: #c9a84c;
+            --gold2: #e8c97a;
+            --white: #f8f6f2;
+            --muted: #8a9bb5;
+            --green: #4caf7d
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            overflow-x: hidden
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 900;
+            padding: 10px 52px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(10, 22, 40, .97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(201, 168, 76, .14);
+            transition: box-shadow .3s
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            position: relative;
+            overflow: visible
+        }
+
+        .logo-wrap {
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, #c9a84c, #e8c97a);
+            padding: 3px
+        }
+
+        .logo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block
+        }
+
+        .logo-txt {
+            line-height: 1.2
+        }
+
+        .logo-txt b {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--white);
+            display: block
+        }
+
+        .logo-txt small {
+            font-size: 9.5px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-family: 'DM Sans', sans-serif
+        }
+
+        /* Bird animation */
+        .birds {
+            position: absolute;
+            left: 52px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            width: 60px;
+            height: 22px
+        }
+
+        .bird {
+            position: absolute;
+            font-size: 9px;
+            opacity: 0;
+            animation: fly 3.8s ease-in-out infinite
+        }
+
+        .bird:nth-child(1) {
+            animation-delay: 0s;
+            top: 1px
+        }
+
+        .bird:nth-child(2) {
+            animation-delay: .65s;
+            top: 7px
+        }
+
+        .bird:nth-child(3) {
+            animation-delay: 1.3s;
+            top: 13px
+        }
+
+        @keyframes fly {
+            0% {
+                opacity: 0;
+                left: 0;
+                transform: scale(.5) translateY(0)
+            }
+
+            18% {
+                opacity: 1;
+                left: 14px;
+                transform: scale(.8) translateY(-3px)
+            }
+
+            52% {
+                opacity: 1;
+                left: 36px;
+                transform: scale(1) translateY(2px)
+            }
+
+            82% {
+                opacity: .5;
+                left: 54px;
+                transform: scale(.7) translateY(-1px)
+            }
+
+            100% {
+                opacity: 0;
+                left: 68px;
+                transform: scale(.4) translateY(0)
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            list-style: none
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 11.5px;
+            font-weight: 500;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            transition: color .3s
+        }
+
+        .nav-links a:hover {
+            color: var(--gold)
+        }
+
+        .nav-btns {
+            display: flex;
+            gap: 7px
+        }
+
+        .btn-no {
+            padding: 7px 14px;
+            border: 1px solid rgba(201, 168, 76, .38);
+            color: var(--gold);
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all .25s
+        }
+
+        .btn-no:hover {
+            background: rgba(201, 168, 76, .08)
+        }
+
+        .btn-ng {
+            padding: 7px 14px;
+            background: var(--gold);
+            color: var(--navy);
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: all .25s
+        }
+
+        .btn-ng:hover {
+            background: var(--gold2);
+            transform: translateY(-1px)
+        }
+
+        /* ── BUTTONS ── */
+        .btn-g {
+            padding: 11px 26px;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            color: var(--navy);
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 12.5px;
+            letter-spacing: .4px;
+            transition: all .3s;
+            box-shadow: 0 4px 18px rgba(201, 168, 76, .2);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif
+        }
+
+        .btn-g:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 26px rgba(201, 168, 76, .36)
+        }
+
+        .btn-gh {
+            padding: 11px 26px;
+            border: 1px solid rgba(201, 168, 76, .38);
+            color: var(--gold);
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 12.5px;
+            transition: all .25s;
+            display: inline-block
+        }
+
+        .btn-gh:hover {
+            border-color: var(--gold);
+            background: rgba(201, 168, 76, .07)
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 112px 52px 68px;
+            overflow: hidden
+        }
+
+        .h-imgbg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+            opacity: .08
+        }
+
+        .h-ov {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(26, 58, 92, .68) 0%, transparent 70%), linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%)
+        }
+
+        .h-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(201, 168, 76, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(201, 168, 76, .04) 1px, transparent 1px);
+            background-size: 58px 58px
+        }
+
+        .h-diag {
+            position: absolute;
+            top: -20%;
+            right: -5%;
+            width: 52%;
+            height: 140%;
+            background: linear-gradient(135deg, rgba(17, 34, 64, .9), rgba(26, 58, 92, .42));
+            transform: skewX(-8deg);
+            border-left: 1px solid rgba(201, 168, 76, .17);
+        }
+
+        .h-content {
+            position: relative;
+            z-index: 2;
+            max-width: 630px
+        }
+
+        .h-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 5px 13px;
+            border: 1px solid rgba(201, 168, 76, .38);
+            border-radius: 100px;
+            font-size: 10.5px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 22px;
+            animation: fup .8s ease both
+        }
+
+        .h-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: bl 2s infinite
+        }
+
+        @keyframes bl {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .2
+            }
+        }
+
+        .h-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(42px, 5.2vw, 74px);
+            font-weight: 300;
+            line-height: 1.04;
+            margin-bottom: 18px;
+            animation: fup .8s ease .1s both
+        }
+
+        .h-title strong {
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--white), var(--gold2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block
+        }
+
+        .h-title em {
+            font-style: italic;
+            color: var(--gold)
+        }
+
+        .h-sub {
+            font-size: 14.5px;
+            line-height: 1.78;
+            color: var(--muted);
+            margin-bottom: 32px;
+            max-width: 490px;
+            animation: fup .8s ease .18s both
+        }
+
+        .h-acts {
+            display: flex;
+            gap: 11px;
+            flex-wrap: wrap;
+            animation: fup .8s ease .26s both;
+            margin-bottom: 36px
+        }
+
+        .h-trust {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            animation: fup .8s ease .34s both
+        }
+
+        .h-trust-lbl {
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted)
+        }
+
+        .h-chips {
+            display: flex;
+            gap: 7px;
+            flex-wrap: wrap
+        }
+
+        .chip {
+            padding: 3px 11px;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, .09);
+            border-radius: 100px;
+            font-size: 10.5px;
+            color: var(--muted)
+        }
+
+        .h-stats {
+            position: absolute;
+            right: 68px;
+            bottom: 68px;
+            z-index: 2;
+            display: flex;
+            gap: 38px;
+            animation: fup .8s ease .42s both
+        }
+
+        .snum {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            text-align: center
+        }
+
+        .slbl {
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 3px;
+            text-align: center
+        }
+
+        .h-scroll {
+            position: absolute;
+            bottom: 24px;
+            left: 52px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase
+        }
+
+        .h-ln {
+            width: 34px;
+            height: 1px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            animation: gr 1.5s ease infinite alternate
+        }
+
+        @keyframes gr {
+            from {
+                width: 14px
+            }
+
+            to {
+                width: 54px
+            }
+        }
+
+        @keyframes fup {
+            from {
+                opacity: 0;
+                transform: translateY(22px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        /* ── SHARED ── */
+        section {
+            padding: 60px 52px
+        }
+
+        .mw {
+            max-width: 1120px;
+            margin: 0 auto
+        }
+
+        .ey {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 13px;
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .ey::before {
+            content: '';
+            width: 22px;
+            height: 1px;
+            background: var(--gold)
+        }
+
+        .ey.c {
+            justify-content: center
+        }
+
+        .ey.c::before {
+            display: none
+        }
+
+        .h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(26px, 3vw, 48px);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 12px
+        }
+
+        .h2 strong {
+            font-weight: 700
+        }
+
+        .bar {
+            width: 44px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            margin-bottom: 24px
+        }
+
+        .bar.c {
+            margin: 0 auto 24px
+        }
+
+        .rv {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity .6s ease, transform .6s ease
+        }
+
+        .rv.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .d1 {
+            transition-delay: .08s
+        }
+
+        .d2 {
+            transition-delay: .16s
+        }
+
+        .d3 {
+            transition-delay: .24s
+        }
+
+        .d4 {
+            transition-delay: .32s
+        }
+
+        /* ── ABOUT ── */
+        #about {
+            background: var(--navy2)
+        }
+
+        .ab-g {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center
+        }
+
+        .ab-txt p {
+            font-size: 14px;
+            line-height: 1.83;
+            color: var(--muted);
+            margin-bottom: 13px
+        }
+
+        .ab-txt p strong {
+            color: var(--white)
+        }
+
+        .ab-img-w {
+            position: relative
+        }
+
+        .ab-img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 13px;
+            display: block
+        }
+
+        .ab-bdg {
+            position: absolute;
+            bottom: -14px;
+            left: -14px;
+            width: 84px;
+            height: 84px;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-weight: 700;
+            box-shadow: 0 8px 26px rgba(201, 168, 76, .3)
+        }
+
+        .ab-bdg .yr {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1
+        }
+
+        .ab-bdg .lb {
+            font-size: 7.5px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase
+        }
+
+        .af-g {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 24px
+        }
+
+        .af {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px;
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid rgba(255, 255, 255, .05);
+            border-radius: 8px
+        }
+
+        .af-i {
+            font-size: 17px;
+            flex-shrink: 0;
+            margin-top: 2px
+        }
+
+        .af h4 {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 2px
+        }
+
+        .af p {
+            font-size: 10.5px;
+            color: var(--muted);
+            line-height: 1.4
+        }
+
+        /* ── VISION ── */
+        #vision {
+            background: var(--navy)
+        }
+
+        .vm-g {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-bottom: 36px
+        }
+
+        .vm {
+            border-radius: 13px;
+            padding: 32px
+        }
+
+        .vm-v {
+            background: linear-gradient(135deg, rgba(26, 58, 92, .85), rgba(17, 34, 64, .95));
+            border: 1px solid rgba(201, 168, 76, .2)
+        }
+
+        .vm-m {
+            background: linear-gradient(135deg, rgba(201, 168, 76, .1), rgba(201, 168, 76, .03));
+            border: 1px solid rgba(201, 168, 76, .26)
+        }
+
+        .vm h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--gold2)
+        }
+
+        .vm p {
+            font-size: 13.5px;
+            line-height: 1.78;
+            color: var(--muted)
+        }
+
+        .vm p strong {
+            color: var(--white)
+        }
+
+        .vals {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .val {
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid rgba(255, 255, 255, .06);
+            border-radius: 10px;
+            padding: 20px 16px;
+            text-align: center;
+            transition: all .3s
+        }
+
+        .val:hover {
+            border-color: rgba(201, 168, 76, .24);
+            transform: translateY(-3px)
+        }
+
+        .val-i {
+            font-size: 26px;
+            margin-bottom: 9px
+        }
+
+        .val h4 {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 4px
+        }
+
+        .val p {
+            font-size: 11px;
+            color: var(--muted);
+            line-height: 1.43
+        }
+
+        /* ── SOLUTIONS ── */
+        #solutions {
+            background: var(--navy2)
+        }
+
+        .sol-g {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .sc {
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, .06);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all .4s;
+            position: relative
+        }
+
+        .sc::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold2));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .4s
+        }
+
+        .sc:hover {
+            border-color: rgba(201, 168, 76, .23);
+            transform: translateY(-5px);
+            box-shadow: 0 18px 44px rgba(0, 0, 0, .3)
+        }
+
+        .sc:hover::after {
+            transform: scaleX(1)
+        }
+
+        .sc-img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block
+        }
+
+        .sc-body {
+            padding: 20px 18px 16px
+        }
+
+        .sc-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-weight: 700;
+            color: rgba(201, 168, 76, .09);
+            line-height: 1;
+            margin-bottom: 4px
+        }
+
+        .sc-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 7px
+        }
+
+        .sc-desc {
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.63
+        }
+
+        .sc-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 10px
+        }
+
+        .sc-tag {
+            padding: 2px 8px;
+            border: 1px solid rgba(201, 168, 76, .19);
+            border-radius: 100px;
+            font-size: 9.5px;
+            color: var(--gold)
+        }
+
+        .sc-btn {
+            margin-top: 12px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--gold);
+            font-size: 12.5px;
+            font-weight: 600;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: gap .25s;
+            font-family: 'DM Sans', sans-serif
+        }
+
+        .sc-btn:hover {
+            gap: 9px
+        }
+
+        /* ── WHY ── */
+        #why {
+            background: var(--navy)
+        }
+
+        .why-g {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-bottom: 40px
+        }
+
+        .why-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 13px
+        }
+
+        .why-txt p {
+            font-size: 13.5px;
+            line-height: 1.8;
+            color: var(--muted);
+            margin-bottom: 18px
+        }
+
+        .why-txt p strong {
+            color: var(--white)
+        }
+
+        .wl {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px
+        }
+
+        .wl li {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid rgba(255, 255, 255, .05);
+            border-radius: 7px;
+            transition: all .25s
+        }
+
+        .wl li:hover {
+            border-color: rgba(201, 168, 76, .18);
+            background: rgba(201, 168, 76, .03)
+        }
+
+        .wl li span {
+            font-size: 15px;
+            flex-shrink: 0
+        }
+
+        .wl-t strong {
+            color: var(--white);
+            display: block;
+            font-size: 12.5px;
+            margin-bottom: 1px
+        }
+
+        .wl-t small {
+            font-size: 10.5px;
+            color: var(--muted)
+        }
+
+        .wcs {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px
+        }
+
+        .wc {
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid rgba(255, 255, 255, .06);
+            border-radius: 10px;
+            padding: 22px 14px;
+            text-align: center;
+            transition: all .35s;
+            position: relative;
+            overflow: hidden
+        }
+
+        .wc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--gold2));
+            transform: scaleX(0);
+            transition: transform .35s
+        }
+
+        .wc:hover {
+            border-color: rgba(201, 168, 76, .22);
+            transform: translateY(-4px)
+        }
+
+        .wc:hover::before {
+            transform: scaleX(1)
+        }
+
+        .wc-i {
+            font-size: 28px;
+            margin-bottom: 10px
+        }
+
+        .wc h4 {
+            font-size: 12.5px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--white)
+        }
+
+        .wc p {
+            font-size: 10.5px;
+            color: var(--muted);
+            line-height: 1.45
+        }
+
+        /* ── INDUSTRIES ── */
+        #industries {
+            background: var(--navy2)
+        }
+
+        .ind-hdr {
+            text-align: center;
+            max-width: 580px;
+            margin: 0 auto 36px
+        }
+
+        .ind-g {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            max-width: 1020px;
+            margin: 0 auto 40px
+        }
+
+        .ic {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 148px;
+            cursor: default
+        }
+
+        .ic-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s
+        }
+
+        .ic:hover .ic-img {
+            transform: scale(1.04)
+        }
+
+        .ic-ov {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(6, 14, 26, .9) 0%, rgba(6, 14, 26, .35) 60%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 14px
+        }
+
+        .ic-ico {
+            font-size: 18px;
+            margin-bottom: 3px
+        }
+
+        .ic-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white)
+        }
+
+        .ic-sub {
+            font-size: 10.5px;
+            color: var(--muted)
+        }
+
+        .collars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 1020px;
+            margin: 0 auto
+        }
+
+        .cl {
+            border-radius: 11px;
+            padding: 24px
+        }
+
+        .cl-b {
+            background: linear-gradient(145deg, rgba(30, 70, 140, .28), rgba(20, 50, 100, .18));
+            border: 1px solid rgba(76, 143, 201, .22)
+        }
+
+        .cl-w {
+            background: linear-gradient(145deg, rgba(201, 168, 76, .1), rgba(201, 168, 76, .03));
+            border: 1px solid rgba(201, 168, 76, .22)
+        }
+
+        .cl-gr {
+            background: linear-gradient(145deg, rgba(100, 110, 130, .17), rgba(80, 90, 110, .09));
+            border: 1px solid rgba(138, 155, 181, .18)
+        }
+
+        .cl-dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            margin-bottom: 12px
+        }
+
+        .cl-b .cl-dot {
+            background: #4c8fc9
+        }
+
+        .cl-w .cl-dot {
+            background: var(--gold)
+        }
+
+        .cl-gr .cl-dot {
+            background: var(--muted)
+        }
+
+        .cl h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--white)
+        }
+
+        .cl p {
+            font-size: 11.5px;
+            color: var(--muted);
+            line-height: 1.58
+        }
+
+        .cl-roles {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px
+        }
+
+        .cr {
+            padding: 2px 8px;
+            border-radius: 100px;
+            font-size: 10px
+        }
+
+        .cl-b .cr {
+            background: rgba(76, 143, 201, .14);
+            color: #7ab5e8
+        }
+
+        .cl-w .cr {
+            background: rgba(201, 168, 76, .14);
+            color: var(--gold2)
+        }
+
+        .cl-gr .cr {
+            background: rgba(138, 155, 181, .14);
+            color: var(--muted)
+        }
+
+        /* ── NAPS ── */
+        #naps {
+            background: var(--navy)
+        }
+
+        .naps-g {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: start;
+        }
+
+        .naps-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 11px;
+            margin-bottom: 18px
+        }
+
+        .naps-txt p {
+            font-size: 13.5px;
+            line-height: 1.8;
+            color: var(--muted);
+            margin-bottom: 11px
+        }
+
+        .naps-txt p strong {
+            color: var(--white)
+        }
+
+        .naps-hl {
+            margin-top: 20px;
+            padding: 18px;
+            background: linear-gradient(135deg, rgba(201, 168, 76, .1), rgba(201, 168, 76, .04));
+            border: 1px solid rgba(201, 168, 76, .22);
+            border-radius: 7px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            color: var(--gold2);
+            font-style: italic;
+            line-height: 1.5
+        }
+
+        .naps-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top:120px;
+        }
+
+        .ns {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 13px 17px;
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid rgba(255, 255, 255, .05);
+            border-radius: 7px;
+            transition: all .25s
+        }
+
+        .ns:hover {
+            border-color: rgba(201, 168, 76, .18);
+            background: rgba(201, 168, 76, .03)
+        }
+
+        .ns-i {
+            font-size: 17px;
+            width: 30px;
+            text-align: center;
+            flex-shrink: 0
+        }
+
+        .ns h4 {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 2px
+        }
+
+        .ns p {
+            font-size: 11px;
+            color: var(--muted)
+        }
+
+        /* ── ROLES ── */
+        #roles {
+            background: var(--navy2)
+        }
+
+        .roles-hdr {
+            text-align: center;
+            max-width: 540px;
+            margin: 0 auto 36px
+        }
+
+        .ticker-w {
+            overflow: hidden;
+            margin: 0 -52px;
+            padding: 6px 0 22px
+        }
+
+        .t-track {
+            display: flex;
+            gap: 9px;
+            animation: tick 24s linear infinite;
+            width: max-content
+        }
+
+        @keyframes tick {
+            from {
+                transform: translateX(0)
+            }
+
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        .rpill {
+            flex-shrink: 0;
+            padding: 7px 16px;
+            background: rgba(255, 255, 255, .03);
+            border: 1px solid rgba(255, 255, 255, .07);
+            border-radius: 100px;
+            font-size: 11.5px;
+            color: var(--muted);
+            white-space: nowrap;
+            cursor: default
+        }
+
+        .rpill:hover {
+            border-color: rgba(201, 168, 76, .28);
+            color: var(--gold)
+        }
+
+        /* ── CLIENTS ── */
+        #clients {
+            background: var(--navy)
+        }
+
+        .cl-hdr {
+            text-align: center;
+            max-width: 540px;
+            margin: 0 auto 38px
+        }
+
+        .cl-logos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            max-width: 1020px;
+            margin: 0 auto
+        }
+
+        .clc {
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, .06);
+            border-radius: 10px;
+            padding: 18px 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            transition: all .32s;
+            min-height: 82px
+        }
+
+        .clc:hover {
+            border-color: rgba(201, 168, 76, .23);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .22)
+        }
+
+        .clc-img {
+            width: auto;
+            max-width: 96px;
+            max-height: 34px;
+            object-fit: contain;
+            filter: brightness(0) invert(.62);
+            transition: filter .3s
+        }
+
+        .clc:hover .clc-img {
+            filter: brightness(0) invert(1)
+        }
+
+        .real-img {
+            filter: none !important;
+            opacity: .72;
+            transition: opacity .3s !important;
+            max-height: 38px !important
+        }
+
+        .clc:hover .real-img {
+            opacity: 1 !important
+        }
+
+        .clc-name {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--muted);
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: .4px;
+            text-align: center;
+            transition: color .3s
+        }
+
+        .clc:hover .clc-name {
+            color: var(--white)
+        }
+
+        /* ── PRESENCE ── */
+        #presence {
+            background: var(--navy2)
+        }
+
+        .pres-hdr {
+            text-align: center;
+            max-width: 540px;
+            margin: 0 auto 38px
+        }
+
+        .states-g {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 14px;
+            max-width: 1020px;
+            margin: 0 auto
+        }
+
+        .stc {
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid rgba(255, 255, 255, .07);
+            border-radius: 10px;
+            padding: 22px 12px;
+            text-align: center;
+            transition: all .35s;
+            position: relative;
+            overflow: hidden
+        }
+
+        .stc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--gold2));
+            transform: scaleX(0);
+            transition: transform .35s
+        }
+
+        .stc:hover {
+            border-color: rgba(201, 168, 76, .28);
+            transform: translateY(-3px)
+        }
+
+        .stc:hover::before {
+            transform: scaleX(1)
+        }
+
+        .st-em {
+            font-size: 26px;
+            margin-bottom: 7px
+        }
+
+        .st-nm {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--white)
+        }
+
+        .pan-box {
+            text-align: center;
+            margin: 28px auto 0;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(201, 168, 76, .07), rgba(201, 168, 76, .02));
+            border: 1px solid rgba(201, 168, 76, .18);
+            border-radius: 10px;
+            max-width: 440px
+        }
+
+        .pan-box p {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6
+        }
+
+        .pan-box strong {
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px
+        }
+
+        /* ── TESTIMONIAL ── */
+        #testimonial {
+            background: var(--navy);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 68px 52px
+        }
+
+        .test-bg-q {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 240px;
+            font-weight: 700;
+            color: rgba(201, 168, 76, .022);
+            pointer-events: none;
+            user-select: none
+        }
+
+        .test-w {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1
+        }
+
+        .test-q {
+            font-size: 58px;
+            color: var(--gold);
+            opacity: .32;
+            font-family: 'Cormorant Garamond', serif;
+            line-height: .8;
+            margin-bottom: 16px
+        }
+
+        .test-txt {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 1.55;
+            color: var(--white);
+            margin-bottom: 20px;
+            font-style: italic
+        }
+
+        .test-auth {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold)
+        }
+
+        .test-sub {
+            font-size: 10.5px;
+            color: var(--muted);
+            margin-top: 3px
+        }
+
+        /* ── APPLY BANNER ── */
+        .apply-b {
+            background: linear-gradient(135deg, rgba(201, 168, 76, .11), rgba(201, 168, 76, .04));
+            border-top: 1px solid rgba(201, 168, 76, .18);
+            border-bottom: 1px solid rgba(201, 168, 76, .18);
+            padding: 48px 52px;
+            text-align: center
+        }
+
+        .apply-b h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 7px
+        }
+
+        .apply-b h3 strong {
+            font-weight: 700;
+            color: var(--gold)
+        }
+
+        .apply-b p {
+            color: var(--muted);
+            font-size: 13.5px;
+            margin-bottom: 20px;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .apply-btns {
+            display: flex;
+            gap: 11px;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+
+        /* ── CONTACT ── */
+        #contact {
+            background: var(--navy2);
+            position: relative
+        }
+
+        .cg-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: start
+        }
+
+        .ci h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 12px
+        }
+
+        .ci h2 strong {
+            font-weight: 700;
+            color: var(--gold)
+        }
+
+        .ci p {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.72;
+            margin-bottom: 24px
+        }
+
+        .clinks {
+            display: flex;
+            flex-direction: column;
+            gap: 9px
+        }
+
+        .clink {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid rgba(255, 255, 255, .06);
+            border-radius: 7px;
+            text-decoration: none;
+            transition: all .25s
+        }
+
+        .clink:hover {
+            border-color: rgba(201, 168, 76, .27);
+            background: rgba(201, 168, 76, .03)
+        }
+
+        .clink-ico {
+            width: 38px;
+            height: 38px;
+            background: rgba(201, 168, 76, .09);
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            flex-shrink: 0
+        }
+
+        .clink h4 {
+            font-size: 9.5px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 2px
+        }
+
+        .clink p {
+            font-size: 12.5px;
+            color: var(--white);
+            font-weight: 500;
+            margin: 0
+        }
+
+        .cf {
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid rgba(255, 255, 255, .07);
+            border-radius: 12px;
+            padding: 32px
+        }
+
+        .cf h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            margin-bottom: 18px
+        }
+
+        .fg {
+            margin-bottom: 10px
+        }
+
+        .fg label {
+            display: block;
+            font-size: 9.5px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 4px
+        }
+
+        .fg input,
+        .fg textarea,
+        .fg select {
+            width: 100%;
+            padding: 9px 12px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .09);
+            border-radius: 5px;
+            color: var(--white);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12.5px;
+            transition: border-color .25s;
+            outline: none
+        }
+
+        .fg input:focus,
+        .fg textarea:focus,
+        .fg select:focus {
+            border-color: rgba(201, 168, 76, .46)
+        }
+
+        .fg select option {
+            background: var(--navy2)
+        }
+
+        .fg textarea {
+            height: 74px;
+            resize: none
+        }
+
+        .frow {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 9px
+        }
+
+        .fsub {
+            width: 100%;
+            padding: 11px;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            color: var(--navy);
+            border: none;
+            border-radius: 5px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12.5px;
+            font-weight: 700;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all .25s;
+            margin-top: 3px
+        }
+
+        .fsub:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(201, 168, 76, .28)
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--dark);
+            padding: 46px 52px 22px;
+            border-top: 1px solid rgba(255, 255, 255, .05)
+        }
+
+        .ft-g {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 36px;
+            margin-bottom: 36px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid rgba(255, 255, 255, .05)
+        }
+
+        .ft-brand p {
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.68;
+            margin: 11px 0 14px;
+            max-width: 250px
+        }
+
+        .ft-soc {
+            display: flex;
+            gap: 7px
+        }
+
+        .soc {
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            transition: all .25s
+        }
+
+        .soc:hover {
+            background: rgba(201, 168, 76, .09);
+            border-color: rgba(201, 168, 76, .28);
+            color: var(--gold)
+        }
+
+        .ft-col h4 {
+            font-size: 9.5px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 11px
+        }
+
+        .ft-col ul {
+            list-style: none
+        }
+
+        .ft-col li {
+            margin-bottom: 7px
+        }
+
+        .ft-col a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 12px;
+            transition: color .25s
+        }
+
+        .ft-col a:hover {
+            color: var(--white)
+        }
+
+        .ft-bot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .ft-copy {
+            font-size: 10.5px;
+            color: rgba(138, 155, 181, .38)
+        }
+
+        .ft-pol {
+            display: flex;
+            gap: 14px
+        }
+
+        .ft-pol a {
+            font-size: 10.5px;
+            color: rgba(138, 155, 181, .38);
+            text-decoration: none;
+            transition: color .25s
+        }
+
+        .ft-pol a:hover {
+            color: var(--muted)
+        }
+
+        /* ── SERVICE MODALS ── */
+        .svc-ov {
+            position: fixed;
+            inset: 0;
+            background: rgba(4, 10, 24, .9);
+            backdrop-filter: blur(10px);
+            z-index: 9800;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px
+        }
+
+        .svc-ov.open {
+            display: flex;
+            animation: ovIn .25s ease both
+        }
+
+        @keyframes ovIn {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .svc-m {
+            background: linear-gradient(145deg, #0d2248, #081830);
+            border: 1px solid rgba(201, 168, 76, .28);
+            border-radius: 16px;
+            padding: 36px 32px 28px;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 36px 90px rgba(0, 0, 0, .6);
+            animation: mIn .3s cubic-bezier(.34, 1.4, .64, 1) both;
+            max-height: 88vh;
+            overflow-y: auto
+        }
+
+        @keyframes mIn {
+            from {
+                opacity: 0;
+                transform: scale(.88) translateY(18px)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0)
+            }
+        }
+
+        .svc-m::-webkit-scrollbar {
+            width: 3px
+        }
+
+        .svc-m::-webkit-scrollbar-thumb {
+            background: rgba(201, 168, 76, .3);
+            border-radius: 2px
+        }
+
+        .svc-mc {
+            position: absolute;
+            top: 11px;
+            right: 11px;
+            width: 34px;
+            height: 34px;
+            background: rgba(255, 255, 255, .09);
+            border: 1px solid rgba(255, 255, 255, .22);
+            border-radius: 7px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .2s;
+            line-height: 1
+        }
+
+        .svc-mc:hover {
+            background: rgba(229, 92, 92, .28);
+            border-color: rgba(229, 92, 92, .55)
+        }
+
+        .svc-m-icon {
+            font-size: 36px;
+            margin-bottom: 10px
+        }
+
+        .svc-m-badge {
+            display: inline-block;
+            padding: 3px 11px;
+            background: rgba(201, 168, 76, .11);
+            border: 1px solid rgba(201, 168, 76, .28);
+            border-radius: 100px;
+            font-size: 9.5px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 10px
+        }
+
+        .svc-m h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 11px;
+            line-height: 1.2
+        }
+
+        .svc-m-desc {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.78;
+            margin-bottom: 14px
+        }
+
+        .svc-m-list {
+            list-style: none;
+            margin-bottom: 18px
+        }
+
+        .svc-m-list li {
+            font-size: 12px;
+            color: #a8bcd0;
+            padding: 5px 0 5px 17px;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, .04)
+        }
+
+        .svc-m-list li:last-child {
+            border-bottom: none
+        }
+
+        .svc-m-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 8px;
+            top: 7px
+        }
+
+        .svc-m-list li strong {
+            color: var(--white)
+        }
+
+        .svc-m-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 20px
+        }
+
+        .svc-m-tag {
+            padding: 3px 9px;
+            border: 1px solid rgba(201, 168, 76, .22);
+            border-radius: 100px;
+            font-size: 9.5px;
+            color: var(--gold)
+        }
+
+        /* ── AI CHAT ── */
+        .c-fab {
+            position: fixed;
+            bottom: 26px;
+            right: 26px;
+            z-index: 800;
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 7px 26px rgba(201, 168, 76, .4);
+            transition: all .3s;
+            animation: fabIn 1s ease .6s both
+        }
+
+        @keyframes fabIn {
+            from {
+                opacity: 0;
+                transform: scale(0)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        .c-fab:hover {
+            transform: scale(1.08)
+        }
+
+        .c-fab.open {
+            background: linear-gradient(135deg, #d94f4f, #e87070)
+        }
+
+        .c-box {
+            position: fixed;
+            bottom: 88px;
+            right: 26px;
+            z-index: 800;
+            width: 348px;
+            background: var(--navy2);
+            border: 1px solid rgba(201, 168, 76, .22);
+            border-radius: 16px;
+            box-shadow: 0 26px 68px rgba(0, 0, 0, .5);
+            display: none;
+            flex-direction: column;
+            overflow: hidden
+        }
+
+        .c-box.open {
+            display: flex;
+            animation: cIn .28s ease both
+        }
+
+        @keyframes cIn {
+            from {
+                opacity: 0;
+                transform: translateY(14px) scale(.95)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1)
+            }
+        }
+
+        .c-head {
+            background: linear-gradient(135deg, var(--navy), var(--navy2));
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(201, 168, 76, .13)
+        }
+
+        .c-av {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            flex-shrink: 0
+        }
+
+        .c-hi h4 {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--white)
+        }
+
+        .c-hi p {
+            font-size: 10px;
+            color: var(--green);
+            display: flex;
+            align-items: center;
+            gap: 4px
+        }
+
+        .c-hi p::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: var(--green);
+            border-radius: 50%;
+            animation: bl 2s infinite
+        }
+
+        .c-msgs {
+            flex: 1;
+            max-height: 320px;
+            overflow-y: auto;
+            padding: 14px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            scroll-behavior: smooth
+        }
+
+        .c-msgs::-webkit-scrollbar {
+            width: 3px
+        }
+
+        .c-msgs::-webkit-scrollbar-thumb {
+            background: rgba(201, 168, 76, .28);
+            border-radius: 2px
+        }
+
+        .msg {
+            max-width: 86%;
+            padding: 9px 12px;
+            border-radius: 12px;
+            font-size: 11.5px;
+            line-height: 1.53;
+            animation: msgIn .22s ease both
+        }
+
+        @keyframes msgIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .msg.bot {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .07);
+            color: var(--white);
+            align-self: flex-start;
+            border-radius: 3px 12px 12px 12px
+        }
+
+        .msg.user {
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            color: var(--navy);
+            align-self: flex-end;
+            border-radius: 12px 3px 12px 12px;
+            font-weight: 500
+        }
+
+        .msg.typing {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .07);
+            align-self: flex-start;
+            border-radius: 3px 12px 12px 12px;
+            padding: 12px 14px
+        }
+
+        .t-dots {
+            display: flex;
+            gap: 4px;
+            align-items: center
+        }
+
+        .t-dots span {
+            width: 5px;
+            height: 5px;
+            background: var(--muted);
+            border-radius: 50%;
+            animation: dot .8s ease infinite alternate
+        }
+
+        .t-dots span:nth-child(2) {
+            animation-delay: .2s
+        }
+
+        .t-dots span:nth-child(3) {
+            animation-delay: .4s
+        }
+
+        @keyframes dot {
+            from {
+                opacity: .3;
+                transform: translateY(0)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(-3px)
+            }
+        }
+
+        .c-quick {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 7px 12px;
+            border-top: 1px solid rgba(255, 255, 255, .04)
+        }
+
+        .qb {
+            padding: 4px 10px;
+            background: rgba(201, 168, 76, .09);
+            border: 1px solid rgba(201, 168, 76, .22);
+            border-radius: 100px;
+            font-size: 10px;
+            color: var(--gold);
+            cursor: pointer;
+            transition: all .2s;
+            font-family: 'DM Sans', sans-serif
+        }
+
+        .qb:hover {
+            background: rgba(201, 168, 76, .18)
+        }
+
+        .c-inp-row {
+            display: flex;
+            gap: 6px;
+            padding: 9px 11px;
+            border-top: 1px solid rgba(255, 255, 255, .05)
+        }
+
+        .c-inp {
+            flex: 1;
+            padding: 7px 11px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .09);
+            border-radius: 6px;
+            color: var(--white);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11.5px;
+            outline: none;
+            transition: border-color .25s
+        }
+
+        .c-inp:focus {
+            border-color: rgba(201, 168, 76, .38)
+        }
+
+        .c-send {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: var(--navy);
+            transition: all .25s;
+            flex-shrink: 0
+        }
+
+        .c-send:hover {
+            transform: scale(1.08)
+        }
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:980px) {
+            .wcs {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .ind-g {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .ft-g {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .vals {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .cl-logos {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        @media(max-width:840px) {
+            nav {
+                padding: 10px 20px
+            }
+
+            .nav-links {
+                display: none
+            }
+
+            section {
+                padding: 48px 24px
+            }
+
+            .hero {
+                padding: 90px 24px 58px
+            }
+
+            .h-stats {
+                right: 24px;
+                bottom: 44px
+            }
+
+            .ab-g,
+            .naps-g,
+            .cg-wrap,
+            .vm-g,
+            .why-g {
+                grid-template-columns: 1fr;
+                gap: 28px
+            }
+
+            .sol-g {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .collars {
+                grid-template-columns: 1fr
+            }
+
+            .states-g {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .ind-g {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .wcs {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            footer {
+                padding: 36px 24px 18px
+            }
+
+            .ft-g {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .apply-b {
+                padding: 36px 24px
+            }
+
+            .ticker-w {
+                margin: 0 -24px
+            }
+
+            .svc-m {
+                padding: 28px 18px 22px
+            }
+        }
+
+        @media(max-width:520px) {
+            section {
+                padding: 40px 14px
+            }
+
+            .hero {
+                padding: 82px 14px 46px
+            }
+
+            .h-stats {
+                display: none
+            }
+
+            .h-scroll {
+                display: none
+            }
+
+            .sol-g {
+                grid-template-columns: 1fr
+            }
+
+            .states-g {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .wcs {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .vals {
+                grid-template-columns: 1fr
+            }
+
+            .cf {
+                padding: 18px
+            }
+
+            .frow {
+                grid-template-columns: 1fr
+            }
+
+            footer {
+                padding: 32px 14px 16px
+            }
+
+            .ft-g {
+                grid-template-columns: 1fr
+            }
+
+            .ft-bot {
+                flex-direction: column;
+                text-align: center
+            }
+
+            .btn-no {
+                display: none
+            }
+
+            .ticker-w {
+                margin: 0 -14px
+            }
+
+            .apply-b {
+                padding: 32px 14px
+            }
+
+            .cl-logos {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .ind-g {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .c-box {
+                width: calc(100vw - 28px);
+                right: 14px
+            }
+
+            .c-fab {
+                bottom: 16px;
+                right: 16px
+            }
+        }
+
+        /* ── LOGO NAV ANIMATED ── */
+        .logo-anim-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            position: relative;
+            overflow: visible
+        }
+
+        .logo-frame {
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, #c9a84c, #e8c97a);
+            padding: 3px;
+            animation: logoPing 3s ease infinite
+        }
+
+        @keyframes logoPing {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(201, 168, 76, .4)
+            }
+
+            50% {
+                box-shadow: 0 0 0 7px rgba(201, 168, 76, 0)
+            }
+        }
+
+        .logo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block
+        }
+
+        .logo-birds-strip {
+            position: absolute;
+            left: 52px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 76px;
+            height: 26px;
+            pointer-events: none;
+            overflow: visible
+        }
+
+        .lb {
+            position: absolute;
+            opacity: 0;
+            font-size: 9px;
+            animation: lbFly 4s ease-in-out infinite
+        }
+
+        .lb:nth-child(1) {
+            animation-delay: 0s;
+            top: 2px
+        }
+
+        .lb:nth-child(2) {
+            animation-delay: .8s;
+            top: 8px
+        }
+
+        .lb:nth-child(3) {
+            animation-delay: 1.6s;
+            top: 14px
+        }
+
+        .lb:nth-child(4) {
+            animation-delay: 2.4s;
+            top: 5px
+        }
+
+        @keyframes lbFly {
+            0% {
+                opacity: 0;
+                left: 0;
+                transform: scale(.5)
+            }
+
+            15% {
+                opacity: 1;
+                left: 14px;
+                transform: scale(.8)
+            }
+
+            55% {
+                opacity: 1;
+                left: 44px;
+                transform: scale(1.05)
+            }
+
+            85% {
+                opacity: .3;
+                left: 66px;
+                transform: scale(.6)
+            }
+
+            100% {
+                opacity: 0;
+                left: 82px;
+                transform: scale(.3)
+            }
+        }
+
+        /* ── COMPACT ALERT ── */
+        .alert-ov {
+            position: fixed;
+            inset: 0;
+            background: rgba(4, 10, 24, .82);
+            backdrop-filter: blur(6px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            animation: aovIn .3s ease both
+        }
+
+        @keyframes aovIn {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .alert-ov.hiding {
+            animation: aovOut .3s ease forwards;
+            pointer-events: none;
+        }
+
+        @keyframes aovOut {
+            0% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        .alert-box {
+            background: linear-gradient(145deg, #0d2248, #081630);
+            border: 1px solid rgba(201, 168, 76, .3);
+            border-radius: 14px;
+            padding: 22px 24px 20px;
+            max-width: 540px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 28px 70px rgba(0, 0, 0, .55);
+            animation: aboxIn .32s cubic-bezier(.34, 1.4, .64, 1) both
+        }
+
+        @keyframes aboxIn {
+            from {
+                opacity: 0;
+                transform: scale(.9) translateY(14px)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0)
+            }
+        }
+
+        .alert-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: 6px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .2s;
+            line-height: 1
+        }
+
+        .alert-close:hover {
+            background: rgba(229, 92, 92, .26);
+            border-color: rgba(229, 92, 92, .5)
+        }
+
+        .alert-top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px
+        }
+
+        .alert-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white)
+        }
+
+        .alert-sub {
+            font-size: 11.5px;
+            color: var(--muted);
+            line-height: 1.65;
+            margin-bottom: 12px
+        }
+
+        .alert-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 12px
+        }
+
+        .acol {
+            background: rgba(255, 255, 255, .03);
+            border: 1px solid rgba(255, 255, 255, .06);
+            border-radius: 8px;
+            padding: 11px 13px
+        }
+
+        .acol.red {
+            border-color: rgba(229, 92, 92, .17);
+            background: rgba(229, 92, 92, .04)
+        }
+
+        .acol h5 {
+            font-size: 10.5px;
+            font-weight: 700;
+            margin-bottom: 6px
+        }
+
+        .acol:not(.red) h5 {
+            color: var(--gold2)
+        }
+
+        .acol.red h5 {
+            color: #e87a7a
+        }
+
+        .acol ul {
+            list-style: none
+        }
+
+        .acol li {
+            font-size: 10px;
+            color: #a8bcd0;
+            padding: 2px 0 2px 12px;
+            position: relative;
+            line-height: 1.36
+        }
+
+        .acol:not(.red) li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 8px;
+            top: 4px
+        }
+
+        .acol.red li::before {
+            content: '⚠';
+            position: absolute;
+            left: 0;
+            font-size: 8px;
+            top: 3px
+        }
+
+        .alert-note {
+            font-size: 11px;
+            color: var(--muted);
+            text-align: center;
+            padding: 8px 12px;
+            background: rgba(201, 168, 76, .07);
+            border: 1px solid rgba(201, 168, 76, .17);
+            border-radius: 6px;
+            margin-bottom: 12px;
+            line-height: 1.5
+        }
+
+        .alert-note strong {
+            color: var(--gold)
+        }
+
+        .alert-dismiss {
+            width: 100%;
+            padding: 9px;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            color: var(--navy);
+            border: none;
+            border-radius: 6px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all .25s;
+            letter-spacing: .5px
+        }
+
+        .alert-dismiss:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 16px rgba(201, 168, 76, .28)
+        }
+
+        /* ── PROCESS SECTION ── */
+        #process {
+            background: var(--navy2)
+        }
+
+        .proc-hdr {
+            text-align: center;
+            max-width: 560px;
+            margin: 0 auto 44px
+        }
+
+        .proc-timeline {
+            position: relative;
+            max-width: 820px;
+            margin: 0 auto
+        }
+
+        .proc-line {
+            display:none;
+        }
+
+        .proc-step {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 1
+        }
+
+        .proc-step:nth-child(even) {
+            flex-direction: row-reverse
+        }
+
+        .proc-step:nth-child(even) .ps-card {
+            text-align: right
+        }
+
+        .ps-dot {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            flex-shrink: 0;
+            z-index: 2;
+            box-shadow: 0 0 0 5px rgba(201, 168, 76, .12), 0 0 0 10px rgba(201, 168, 76, .04)
+        }
+
+        .ps-card {
+            flex: 1;
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid rgba(255, 255, 255, .07);
+            border-radius: 10px;
+            padding: 16px 18px;
+            transition: all .28s
+        }
+
+        .ps-card:hover {
+            border-color: rgba(201, 168, 76, .22);
+            background: rgba(201, 168, 76, .04);
+            transform: translateY(-2px)
+        }
+
+        .ps-num {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 3px
+        }
+
+        .ps-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 4px
+        }
+
+        .ps-desc {
+            font-size: 11.5px;
+            color: var(--muted);
+            line-height: 1.58
+        }
+
+        /* ── 20+ CLIENTS ── */
+        .clients-big {
+            text-align: center;
+            margin-bottom: 24px
+        }
+
+        .clients-big .bnum {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1
+        }
+
+        .clients-big .blbl {
+            font-size: 11.5px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 4px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="alert-ov" id="alertOv">
+        <div class="alert-box">
+            <button class="alert-close" id="alertClose">✕</button>
+            <div class="alert-top"><span style="font-size:24px">⚠️</span>
+                <div class="alert-title">Recruitment Fraud Alert</div>
+            </div>
+            <p class="alert-sub">Fraudulent messages are circulating using the name of <strong
+                    style="color:var(--white)">Infinite Hunters Multi Service Pvt Ltd</strong>. Read carefully before
+                responding to any job offer.</p>
+            <div class="alert-cols">
+                <div class="acol">
+                    <h5>✅ What We Do</h5>
+                    <ul>
+                        <li>Never charge candidates any fees</li>
+                        <li>Only communicate via @infinitehunters.in</li>
+                        <li>All offers through proper interviews</li>
+                        <li>Official: infinitehunters.co</li>
+                    </ul>
+                </div>
+                <div class="acol red">
+                    <h5>🚩 Red Flags</h5>
+                    <ul>
+                        <li>Job offer without any interview</li>
+                        <li>Requests for money or fees upfront</li>
+                        <li>Emails from Gmail / unofficial domains</li>
+                        <li>Offers too good to be true</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="alert-note">Suspect a scam? Report to <strong>Surya@infinitehunters.in</strong></div>
+            <button class="alert-dismiss" id="alertDismiss">I Understand — Continue to Website →</button>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav id="mainNav">
+        <a href="#home" class="logo-anim-wrap">
+            <div class="logo-frame" style="width:38px; height:38px; border-radius:7px; overflow:hidden; background-color:#000; display:flex; align-items:center; justify-content:center;">
+    <img src="https://logo.clearbit.com/infinitehunters.co"
+         style="width:100%; height:100%; object-fit:contain;"
+         alt="IH"
+         onerror="this.parentElement.innerHTML='<div style=&quot;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-weight:bold;color:white;font-size:1.2rem;&quot;>IH</div>'">
+</div>
+            <div class="logo-txt"><b>Infinite Hunters</b><small>Multi Service Pvt Ltd</small></div>
+            <div class="logo-birds-strip"><span class="lb">🕊</span><span class="lb">🕊</span><span
+                    class="lb">🕊</span><span class="lb">🕊</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#solutions">Services</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#naps">NAPS</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-btns">
+            <a href="#roles" class="btn-no">Apply Here</a>
+            <a href="#contact" class="btn-ng">Talk to Us</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="h-imgbg"></div>
+        <div class="h-ov"></div>
+        <div class="h-grid"></div>
+        <div class="h-diag"></div>
+        <div class="h-content">
+            <div class="h-badge">Pan India Staffing &amp; RPO Since 2021</div>
+            <h1 class="h-title">Right People.<br><strong>Right Skills.</strong>Right <em>Time.</em></h1>
+            <p class="h-sub">Infinite Hunters is a premier human resource mobility solutions provider — delivering
+                contract staffing, RPO, payroll, NAPS, and statutory compliance across Pan India with speed, precision,
+                and full compliance.</p>
+            <div class="h-acts"><a href="#solutions" class="btn-g">Explore Our Services</a><a href="#contact"
+                    class="btn-gh">Talk to Us →</a></div>
+            <div class="h-trust"><span class="h-trust-lbl">Trusted By</span>
+                <div class="h-chips"><span class="chip">Swiggy</span><span class="chip">Zepto</span><span
+                        class="chip">Aditya Birla Capital</span><span class="chip">Shadowfax</span><span
+                        class="chip">Nippon Steel</span></div>
+            </div>
+        </div>
+        <div class="h-stats">
+            <div>
+                <div class="snum">6+</div>
+                <div class="slbl">States</div>
+            </div>
+            <div>
+                <div class="snum">20+</div>
+                <div class="slbl">Clients</div>
+            </div>
+            <div>
+                <div class="snum">4+</div>
+                <div class="slbl">Years</div>
+            </div>
+        </div>
+        <div class="h-scroll">
+            <div class="h-ln"></div>Scroll to explore
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="mw ab-g">
+            <div class="rv">
+                <div class="ey">Who We Are</div>
+                <h2 class="h2">Your Strategic <strong>HR Partner</strong></h2>
+                <div class="bar"></div>
+                <p><strong>Infinite Hunters Multi Service Pvt Ltd</strong> is a premier human resource mobility
+                    solutions provider established in 2021 — built on one belief: the right people in the right roles
+                    transform businesses.</p>
+                <p>We specialise in <strong>blue collar, white collar, and grey collar hiring</strong> across Pan India.
+                    Our onsite delivery model for industrial and logistics sectors ensures rapid turnaround without
+                    compromising quality or compliance.</p>
+                <p>With domain expertise across our leadership team, we don't just fill vacancies — we build workforces
+                    that drive performance. Every placement is background-verified, statutory compliant, and culturally
+                    aligned.</p>
+                <div style="margin-top:20px"><a href="#contact" class="btn-g">Partner With Us</a></div>
+                <div class="af-g">
+                    <div class="af"><span class="af-i">🎯</span>
+                        <div>
+                            <h4>Mission-Driven</h4>
+                            <p>Measurable value through precise talent placement and workforce management.</p>
+                        </div>
+                    </div>
+                    <div class="af"><span class="af-i">⚡</span>
+                        <div>
+                            <h4>Fast TAT</h4>
+                            <p>Onsite model for industrial &amp; logistics — rapid, verified deployment.</p>
+                        </div>
+                    </div>
+                    <div class="af"><span class="af-i">🛡️</span>
+                        <div>
+                            <h4>100% Compliant</h4>
+                            <p>Fully statutory compliant, background-verified staffing and payroll.</p>
+                        </div>
+                    </div>
+                    <div class="af"><span class="af-i">🌐</span>
+                        <div>
+                            <h4>Pan India Reach</h4>
+                            <p>Active presence: TN, KA, MH, AP, TS &amp; Delhi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rv d2 ab-img-w">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80"
+                    alt="Infinite Hunters Team" class="ab-img" />
+                <div class="ab-bdg"><span class="yr">2021</span><span class="lb">Founded</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION -->
+    <section id="vision">
+        <div class="mw">
+            <div style="text-align:center;max-width:620px;margin:0 auto 38px" class="rv">
+                <div class="ey c">Our Purpose</div>
+                <h2 class="h2">Vision, Mission <strong>&amp; Values</strong></h2>
+                <div class="bar c"></div>
+                <p style="color:var(--muted);font-size:13.5px;line-height:1.72">Every placement, every payroll, every
+                    compliance managed — driven by one purpose: connecting the right talent with the right opportunity.
+                </p>
+            </div>
+            <div class="vm-g">
+                <div class="vm vm-v rv">
+                    <div style="font-size:34px;margin-bottom:13px">🔭</div>
+                    <h3>Our Vision</h3>
+                    <p>To drive economic productivity and enterprise profitability by matching employment opportunities
+                        to the <strong>right people</strong>, with the <strong>right skills</strong>, at the
+                        <strong>right time</strong> — across every part of India.
+                    </p>
+                </div>
+                <div class="vm vm-m rv d2">
+                    <div style="font-size:34px;margin-bottom:13px">🚀</div>
+                    <h3>Our Mission</h3>
+                    <p>To empower thousands of individuals annually to find <strong>meaningful, fairly remunerated
+                            work</strong> — while enabling businesses to build high-performing, legally compliant
+                        workforces across Pan India.</p>
+                </div>
+            </div>
+            <div class="vals">
+                <div class="val rv">
+                    <div class="val-i">🤝</div>
+                    <h4>Integrity</h4>
+                    <p>Transparent, ethical hiring — always.</p>
+                </div>
+                <div class="val rv d1">
+                    <div class="val-i">⚡</div>
+                    <h4>Speed</h4>
+                    <p>Quick turnaround via our onsite delivery model.</p>
+                </div>
+                <div class="val rv d2">
+                    <div class="val-i">🎯</div>
+                    <h4>Precision</h4>
+                    <p>Every placement matched to domain, function &amp; culture.</p>
+                </div>
+                <div class="val rv d3">
+                    <div class="val-i">🛡️</div>
+                    <h4>Compliance</h4>
+                    <p>Fully law-abiding solutions — zero risk to your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTIONS / SERVICES -->
+    <section id="solutions">
+        <div class="mw">
+            <div style="max-width:560px;margin-bottom:40px" class="rv">
+                <div class="ey">What We Offer</div>
+                <h2 class="h2">Complete Workforce <strong>Solutions</strong></h2>
+                <div class="bar"></div>
+                <p style="color:var(--muted);font-size:13.5px;line-height:1.75">From sourcing to compliance, we handle
+                    every dimension of your workforce needs so you can focus entirely on growing your business.</p>
+            </div>
+            <div class="sol-g">
+                <div class="sc rv"><img
+                        src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=80"
+                        alt="Contract Staffing" class="sc-img" />
+                    <div class="sc-body">
+                        <div class="sc-num">01</div>
+                        <div class="sc-title">Temporary &amp; Contract Staffing</div>
+                        <p class="sc-desc">Flexible workforce solutions for peak periods, project surges, or ongoing
+                            operations. Onsite model delivers background-verified candidates with speed — across blue,
+                            white and grey collar roles.</p>
+                        <div class="sc-tags"><span class="sc-tag">Blue Collar</span><span class="sc-tag">White
+                                Collar</span><span class="sc-tag">Grey Collar</span><span class="sc-tag">Pan
+                                India</span></div>
+                        <button class="sc-btn" onclick="openModal('m-contract')">Learn More →</button>
+                    </div>
+                </div>
+
+                <div class="sc rv d1"><img
+                        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+                        alt="RPO" class="sc-img" />
+                    <div class="sc-body">
+                        <div class="sc-num">02</div>
+                        <div class="sc-title">Permanent Recruitment &amp; RPO</div>
+                        <p class="sc-desc">End-to-end recruitment process outsourcing — from sourcing to onboarding. We
+                            act as an extension of your talent team, delivering the right hire every time with clearly
+                            defined workflows.</p>
+                        <div class="sc-tags"><span class="sc-tag">Enterprise RPO</span><span class="sc-tag">Project
+                                RPO</span><span class="sc-tag">Leadership Hiring</span></div>
+                        <button class="sc-btn" onclick="openModal('m-rpo')">Learn More →</button>
+                    </div>
+                </div>
+
+                <div class="sc rv d2"><img
+                        src="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=600&q=80"
+                        alt="Facility" class="sc-img" />
+                    <div class="sc-body">
+                        <div class="sc-num">03</div>
+                        <div class="sc-title">Facility Management &amp; Housekeeping</div>
+                        <p class="sc-desc">Trained, professionally managed facility and housekeeping staff — deployed
+                            swiftly, fully supervised, and seamlessly integrated into your operations under the Infinite
+                            Hunters banner.</p>
+                        <div class="sc-tags"><span class="sc-tag">Housekeeping</span><span class="sc-tag">Facility
+                                Staff</span><span class="sc-tag">Security</span></div>
+                        <button class="sc-btn" onclick="openModal('m-facility')">Learn More →</button>
+                    </div>
+                </div>
+
+                <div class="sc rv"><img
+                        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80"
+                        alt="Payroll" class="sc-img" />
+                    <div class="sc-body">
+                        <div class="sc-num">04</div>
+                        <div class="sc-title">Payroll Solutions</div>
+                        <p class="sc-desc">Complete payroll outsourcing — salary processing, PF, ESI, PT, LWF, TDS
+                            computation and filing. Stay current with every labour law change, cost-effectively and
+                            without error.</p>
+                        <div class="sc-tags"><span class="sc-tag">PF &amp; ESI</span><span
+                                class="sc-tag">TDS</span><span class="sc-tag">LWF &amp; PT</span><span
+                                class="sc-tag">Full Compliance</span></div>
+                        <button class="sc-btn" onclick="openModal('m-payroll')">Learn More →</button>
+                    </div>
+                </div>
+
+                <div class="sc rv d1"><img
+                        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
+                        alt="NAPS" class="sc-img" />
+                    <div class="sc-body">
+                        <div class="sc-num">05</div>
+                        <div class="sc-title">NAPS Apprenticeship</div>
+                        <p class="sc-desc">End-to-end NAPS management — sourcing, portal registration, training, stipend
+                            management, document compliance, and government liaison. Maximise incentives, zero admin
+                            burden.</p>
+                        <div class="sc-tags"><span class="sc-tag">NAPS</span><span class="sc-tag">Govt
+                                Incentives</span><span class="sc-tag">Training</span></div>
+                        <button class="sc-btn" onclick="openModal('m-naps')">Learn More →</button>
+                    </div>
+                </div>
+
+                <div class="sc rv d2"><img
+                        src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80"
+                        alt="Compliance" class="sc-img" />
+                    <div class="sc-body">
+                        <div class="sc-num">06</div>
+                        <div class="sc-title">Statutory Compliance Services</div>
+                        <p class="sc-desc">Labour law compliance, register maintenance, return filing, and due payment
+                            management. Our experts navigate the full compliance landscape so your business stays fully
+                            protected — always.</p>
+                        <div class="sc-tags"><span class="sc-tag">Labour Law</span><span class="sc-tag">Returns
+                                Filing</span><span class="sc-tag">Audit Ready</span></div>
+                        <button class="sc-btn" onclick="openModal('m-compliance')">Learn More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why">
+        <div class="mw">
+            <div class="why-g">
+                <div class="rv"><img
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                        alt="Why IH" class="why-img" /></div>
+                <div class="why-txt rv d2">
+                    <div class="ey">Why Us</div>
+                    <h2 class="h2">Why Choose <strong>Infinite Hunters</strong></h2>
+                    <div class="bar"></div>
+                    <p>We stand apart by combining domain expertise, onsite delivery, and end-to-end accountability.
+                        We're not just a vendor — we're your workforce partner.</p>
+                    <ul class="wl">
+                        <li><span>🌐</span>
+                            <div class="wl-t"><strong>Pan India Operational Reach</strong><small>Active teams across 6
+                                    major states — always close to where you need us.</small></div>
+                        </li>
+                        <li><span>⚡</span>
+                            <div class="wl-t"><strong>Industry-Leading Turnaround Time</strong><small>Onsite model for
+                                    industrial &amp; logistics with rapid, verified deployment.</small></div>
+                        </li>
+                        <li><span>🎯</span>
+                            <div class="wl-t"><strong>Domain-Specific Expertise</strong><small>A decade of experience in
+                                    blue, white &amp; grey collar hiring across sectors.</small></div>
+                        </li>
+                        <li><span>🛡️</span>
+                            <div class="wl-t"><strong>Zero Compliance Risk</strong><small>Fully statutory compliant,
+                                    background-verified, documented end-to-end.</small></div>
+                        </li>
+                        <li><span>🤝</span>
+                            <div class="wl-t"><strong>Customised Solutions</strong><small>No one-size-fits-all. Every
+                                    solution designed around your business goals.</small></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wcs">
+                <div class="wc rv">
+                    <div class="wc-i">🌐</div>
+                    <h4>Pan India Reach</h4>
+                    <p>6 states, consistent delivery wherever you operate.</p>
+                </div>
+                <div class="wc rv d1">
+                    <div class="wc-i">⚡</div>
+                    <h4>Fast Turnaround</h4>
+                    <p>Onsite model — quick, verified placements.</p>
+                </div>
+                <div class="wc rv d2">
+                    <div class="wc-i">🎯</div>
+                    <h4>Industry Expertise</h4>
+                    <p>10+ years domain-specific hiring knowledge.</p>
+                </div>
+                <div class="wc rv d3">
+                    <div class="wc-i">🛡️</div>
+                    <h4>100% Compliant</h4>
+                    <p>Statutory compliant, background-verified staffing.</p>
+                </div>
+                <div class="wc rv d4">
+                    <div class="wc-i">🤝</div>
+                    <h4>Client-Centric</h4>
+                    <p>Customised strategies for your unique business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section id="industries">
+        <div class="mw">
+            <div class="ind-hdr rv">
+                <div class="ey c">Sectors We Serve</div>
+                <h2 class="h2" style="text-align:center">Industries We <strong>Specialise In</strong></h2>
+                <div class="bar c"></div>
+                <p style="color:var(--muted);font-size:13.5px;max-width:520px;margin:0 auto;line-height:1.7">From
+                    fast-paced FMCG and logistics to precision-driven manufacturing and healthcare — our workforce
+                    solutions span every industry that values people.</p>
+            </div>
+            <div class="ind-g">
+                <div class="ic rv"><img
+                        src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=500&q=80"
+                        class="ic-img" alt="Logistics" />
+                    <div class="ic-ov">
+                        <div class="ic-ico">🚚</div>
+                        <div class="ic-name">Logistics &amp; Transportation</div>
+                        <div class="ic-sub">Delivery, warehousing, last-mile</div>
+                    </div>
+                </div>
+                <div class="ic rv d1"><img
+                        src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=500&q=80"
+                        class="ic-img" alt="Manufacturing" />
+                    <div class="ic-ov">
+                        <div class="ic-ico">🏭</div>
+                        <div class="ic-name">Industrial &amp; Manufacturing</div>
+                        <div class="ic-sub">Plant operators, technicians, supervisors</div>
+                    </div>
+                </div>
+                <div class="ic rv d2"><img
+                        src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=500&q=80"
+                        class="ic-img" alt="Retail" />
+                    <div class="ic-ov">
+                        <div class="ic-ico">🛍️</div>
+                        <div class="ic-name">Retail &amp; eCommerce</div>
+                        <div class="ic-sub">Store staff, operations, fulfillment</div>
+                    </div>
+                </div>
+                <div class="ic rv"><img
+                        src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=500&q=80"
+                        class="ic-img" alt="Healthcare" />
+                    <div class="ic-ov">
+                        <div class="ic-ico">🏥</div>
+                        <div class="ic-name">Healthcare &amp; Labs</div>
+                        <div class="ic-sub">Lab staff, dental, pharma support</div>
+                    </div>
+                </div>
+                <div class="ic rv d1"><img
+                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80"
+                        class="ic-img" alt="Banking" />
+                    <div class="ic-ov">
+                        <div class="ic-ico">🏦</div>
+                        <div class="ic-name">Banking &amp; Finance</div>
+                        <div class="ic-sub">Sales, operations, collections</div>
+                    </div>
+                </div>
+                <div class="ic rv d2"><img
+                        src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=500&q=80"
+                        class="ic-img" alt="FMCG" />
+                    <div class="ic-ov">
+                        <div class="ic-ico">🍔</div>
+                        <div class="ic-name">FMCG &amp; Food Services</div>
+                        <div class="ic-sub">Production, sales, distribution staff</div>
+                    </div>
+                </div>
+                <div class="ic rv"><img
+                        src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500&q=80"
+                        class="ic-img" alt="Consumer" />
+                    <div class="ic-ov">
+                        <div class="ic-ico">📦</div>
+                        <div class="ic-name">Consumer Products &amp; Goods</div>
+                        <div class="ic-sub">Field sales, merchandising, support</div>
+                    </div>
+                </div>
+                <div class="ic rv d1"><img
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=80"
+                        class="ic-img" alt="Tech" />
+                    <div class="ic-ov">
+                        <div class="ic-ico">💻</div>
+                        <div class="ic-name">Technology &amp; IT/ITES</div>
+                        <div class="ic-sub">Support staff, data entry, operations</div>
+                    </div>
+                </div>
+                <div class="ic rv d2"><img
+                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80"
+                        class="ic-img" alt="AgriTech" />
+                    <div class="ic-ov">
+                        <div class="ic-ico">🌿</div>
+                        <div class="ic-name">AgriTech &amp; Supply Chain</div>
+                        <div class="ic-sub">Field agents, warehousing, logistics</div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top:36px">
+                <div style="text-align:center;margin-bottom:22px" class="rv">
+                    <div class="ey c">Hiring Types</div>
+                    <h3 class="h2" style="font-size:clamp(20px,2.2vw,32px);text-align:center">We Hire Across <strong>All
+                            Collar Segments</strong></h3>
+                </div>
+                <div class="collars">
+                    <div class="cl cl-b rv">
+                        <div class="cl-dot"></div>
+                        <h4>Blue Collar</h4>
+                        <p>Skilled and semi-skilled workers for on-ground operational roles.</p>
+                        <div class="cl-roles"><span class="cr">Warehouse Staff</span><span class="cr">Delivery
+                                Exec</span><span class="cr">Technicians</span><span class="cr">Machine Operators</span>
+                        </div>
+                    </div>
+                    <div class="cl cl-w rv d1">
+                        <div class="cl-dot"></div>
+                        <h4>White Collar</h4>
+                        <p>Qualified professionals for office-based and managerial roles.</p>
+                        <div class="cl-roles"><span class="cr">Account Managers</span><span class="cr">HR
+                                Executives</span><span class="cr">Sales Professionals</span><span class="cr">Finance
+                                Teams</span></div>
+                    </div>
+                    <div class="cl cl-gr rv d2">
+                        <div class="cl-dot"></div>
+                        <h4>Grey Collar</h4>
+                        <p>Roles bridging physical and cognitive work — dual skill sets.</p>
+                        <div class="cl-roles"><span class="cr">Field Sales</span><span
+                                class="cr">Telecallers</span><span class="cr">Security Staff</span><span
+                                class="cr">Facility Managers</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NAPS -->
+    <section id="naps">
+        <div class="mw naps-g">
+            <div class="naps-txt rv">
+                <div class="ey">Government Scheme</div>
+                <h2 class="h2">National Apprenticeship <strong>Promotion Scheme</strong></h2>
+                <div class="bar"></div>
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=700&q=80"
+                    alt="Apprenticeship" class="naps-img" />
+                <p>Introduced by the <strong>Government of India in 2016</strong>, NAPS empowers businesses with skilled
+                    apprentices while providing employers 25% of the stipend reimbursed — up to ₹1,500/month per
+                    apprentice.</p>
+                <p>Infinite Hunters handles the <strong>complete lifecycle</strong> of your NAPS programme — sourcing,
+                    registration, training, stipend management, audit compliance, and government liaison.</p>
+                <div class="naps-hl">"End-to-end NAPS management — designed to maximise government incentives while
+                    building a skilled, cost-effective workforce."</div>
+            </div>
+            <div class="naps-steps rv d2">
+                <div class="ns">
+                    <div class="ns-i">🔍</div>
+                    <div>
+                        <h4>Candidate Sourcing</h4>
+                        <p>ITI, diploma and graduate apprentices for your trade.</p>
+                    </div>
+                </div>
+                <div class="ns">
+                    <div class="ns-i">📋</div>
+                    <div>
+                        <h4>Portal Registration</h4>
+                        <p>All BOAT/MHRD portal submissions handled end-to-end.</p>
+                    </div>
+                </div>
+                <div class="ns">
+                    <div class="ns-i">📚</div>
+                    <div>
+                        <h4>Basic Training</h4>
+                        <p>Structured 200+ hr BT through empanelled institutes.</p>
+                    </div>
+                </div>
+                <div class="ns">
+                    <div class="ns-i">💳</div>
+                    <div>
+                        <h4>Stipend &amp; Payroll</h4>
+                        <p>Accurate monthly disbursement and govt claim reimbursement.</p>
+                    </div>
+                </div>
+                <div class="ns">
+                    <div class="ns-i">📁</div>
+                    <div>
+                        <h4>Document Compliance</h4>
+                        <p>Log books, attendance registers, audit submissions maintained.</p>
+                    </div>
+                </div>
+                <div class="ns">
+                    <div class="ns-i">🏛️</div>
+                    <div>
+                        <h4>Government Liaison</h4>
+                        <p>Direct communication with Apprenticeship Advisers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROLES -->
+    <section id="roles">
+        <div class="mw roles-hdr rv">
+            <div class="ey c">Hiring Expertise</div>
+            <h2 class="h2" style="text-align:center">Roles We <strong>Hire For</strong></h2>
+            <div class="bar c"></div>
+            <p style="color:var(--muted);font-size:13.5px">We source candidates across hundreds of functions. Here's a
+                snapshot of roles we regularly fill.</p>
+        </div>
+        <div class="ticker-w">
+            <div class="t-track">
+                <span class="rpill">Delivery Executive</span><span class="rpill">Warehouse Associate</span><span
+                    class="rpill">Field Sales Executive</span><span class="rpill">Telecaller</span><span
+                    class="rpill">Housekeeping Staff</span><span class="rpill">HR Executive</span><span
+                    class="rpill">Account Manager</span><span class="rpill">Machine Operator</span><span
+                    class="rpill">Security Guard</span><span class="rpill">Facility Manager</span><span
+                    class="rpill">Finance Executive</span><span class="rpill">Customer Care Executive</span><span
+                    class="rpill">Production Supervisor</span><span class="rpill">Packing Staff</span><span
+                    class="rpill">Quality Inspector</span><span class="rpill">Store Manager</span><span
+                    class="rpill">Apprentice Technician</span><span class="rpill">Data Entry Operator</span><span
+                    class="rpill">Electrician</span><span class="rpill">Welder</span><span
+                    class="rpill">Plumber</span><span class="rpill">Back Office Executive</span><span
+                    class="rpill">Logistics Coordinator</span>
+                <span class="rpill">Delivery Executive</span><span class="rpill">Warehouse Associate</span><span
+                    class="rpill">Field Sales Executive</span><span class="rpill">Telecaller</span><span
+                    class="rpill">Housekeeping Staff</span><span class="rpill">HR Executive</span><span
+                    class="rpill">Account Manager</span><span class="rpill">Machine Operator</span><span
+                    class="rpill">Security Guard</span><span class="rpill">Facility Manager</span><span
+                    class="rpill">Finance Executive</span><span class="rpill">Customer Care Executive</span><span
+                    class="rpill">Production Supervisor</span><span class="rpill">Packing Staff</span><span
+                    class="rpill">Quality Inspector</span><span class="rpill">Store Manager</span><span
+                    class="rpill">Apprentice Technician</span><span class="rpill">Data Entry Operator</span><span
+                    class="rpill">Electrician</span><span class="rpill">Welder</span><span
+                    class="rpill">Plumber</span><span class="rpill">Back Office Executive</span><span
+                    class="rpill">Logistics Coordinator</span>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:24px" class="rv">
+            <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">Are you a job seeker? We're always hiring
+                across all these roles.</p>
+            <a href="mailto:Surya@infinitehunters.in" class="btn-g">Apply Now →</a>
+        </div>
+    </section>
+
+
+    <section id="process">
+        <div class="mw">
+            <div class="proc-hdr rv">
+                <div class="ey c">How We Work</div>
+                <h2 class="h2" style="text-align:center">Our Proven <strong>6-Step Process</strong></h2>
+                <div class="bar c"></div>
+                <p style="color:var(--muted);font-size:13.5px;line-height:1.72">From understanding your requirement to
+                    delivering a compliant, productive workforce — our proven process ensures zero guesswork and maximum
+                    results, every time.</p>
+            </div>
+            <div class="proc-timeline">
+                <div class="proc-line"></div>
+                <div class="proc-step rv">
+                    <div class="ps-dot">📋</div>
+                    <div class="ps-card">
+                        <div class="ps-num">Step 01</div>
+                        <div class="ps-title">Requirement Discovery</div>
+                        <p class="ps-desc">We meet with your team to deeply understand workforce needs — role profiles,
+                            volumes, timelines, and quality benchmarks. Every engagement starts with listening.</p>
+                    </div>
+                </div>
+                <div class="proc-step rv d1">
+                    <div class="ps-dot">🔍</div>
+                    <div class="ps-card">
+                        <div class="ps-num">Step 02</div>
+                        <div class="ps-title">Sourcing &amp; Screening</div>
+                        <p class="ps-desc">Domain specialist recruiters activate targeted sourcing across job boards,
+                            social networks, referrals, and our proprietary candidate database — filtering for skill and
+                            reliability.</p>
+                    </div>
+                </div>
+                <div class="proc-step rv d2">
+                    <div class="ps-dot">🛡️</div>
+                    <div class="ps-card">
+                        <div class="ps-num">Step 03</div>
+                        <div class="ps-title">Background Verification</div>
+                        <p class="ps-desc">Every shortlisted candidate is police-verified, reference-checked, and
+                            document-validated before client presentation. Your workforce is secure and audit-ready from
+                            day one.</p>
+                    </div>
+                </div>
+                <div class="proc-step rv d3">
+                    <div class="ps-dot">🤝</div>
+                    <div class="ps-card">
+                        <div class="ps-num">Step 04</div>
+                        <div class="ps-title">Interview &amp; Selection</div>
+                        <p class="ps-desc">We coordinate the entire interview process — scheduling, candidate prep,
+                            feedback loops, and offer management. You evaluate; we handle all logistics seamlessly.</p>
+                    </div>
+                </div>
+                <div class="proc-step rv">
+                    <div class="ps-dot">🚀</div>
+                    <div class="ps-card">
+                        <div class="ps-num">Step 05</div>
+                        <div class="ps-title">Deployment &amp; Onboarding</div>
+                        <p class="ps-desc">Candidates are inducted, documented, and deployed — with payroll, PF, ESI,
+                            and statutory registrations fully managed by Infinite Hunters. Smooth, fast, zero-hassle.
+                        </p>
+                    </div>
+                </div>
+                <div class="proc-step rv d1">
+                    <div class="ps-dot">📊</div>
+                    <div class="ps-card">
+                        <div class="ps-num">Step 06</div>
+                        <div class="ps-title">Ongoing Support &amp; Compliance</div>
+                        <p class="ps-desc">Post-deployment: monthly performance reports, compliance filings, attendance
+                            tracking, and rapid replacement in case of attrition. We stay with you for the long run.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section id="clients">
+        <div class="mw">
+            <div class="cl-hdr rv">
+                <div class="ey c">Trusted By</div>
+                <h2 class="h2" style="text-align:center">Our <strong>Clients</strong></h2>
+                <div class="bar c"></div>
+                <p style="color:var(--muted);font-size:13.5px;line-height:1.68">Industry leaders across sectors trust
+                    Infinite Hunters to power their workforce operations every day.</p>
+            </div>
+            <div class="cl-logos">
+                <div class="clc rv"><img src="images/Swiggy-Logo.jpg" class="clc-img real-img" alt="Swiggy"
+                        onerror="this.style.display='none'" />
+                    <div class="clc-name">Swiggy</div>
+                </div>
+                <div class="clc rv d1"><img src="images/Swiggy%20Instamart.jpg" class="clc-img real-img" alt="Swiggy Instamart"
+                        onerror="this.style.display='none'" />
+                    <div class="clc-name">Swiggy Instamart</div>
+                </div>
+                <div class="clc rv d2"><img src="images/zepto.png" class="clc-img real-img" alt="Zepto"
+                        onerror="this.style.display='none'" />
+                    <div class="clc-name">Zepto</div>
+                </div>
+                <div class="clc rv d3"><img src="images/zepto%20cafe.jpg" class="clc-img real-img" alt="Zepto Café"
+                        onerror="this.style.display='none'" />
+                    <div class="clc-name">Zepto Café</div>
+                </div>
+                <div class="clc rv"><img src="images/Aditya Birla Capital Logo.png" class="clc-img real-img"
+                        alt="Aditya Birla Capital" onerror="this.style.display='none'" />
+                    <div class="clc-name">Aditya Birla Capital</div>
+                </div>
+                <div class="clc rv d1"><img src="images/Shadowfax Logo.jpg" class="clc-img real-img" alt="Shadowfax"
+                        onerror="this.style.display='none'" />
+                    <div class="clc-name">Shadowfax</div>
+                </div>
+                <div class="clc rv d2"><img src="images/Honicel Logo.avif" class="clc-img real-img" alt="Honicel"
+                        onerror="this.style.display='none'" />
+                    <div class="clc-name">Honicel</div>
+                </div>
+                <div class="clc rv d3">
+                    <img src="images/ISP Logo.webp" class="clc-img real-img" alt="ISP" onerror="this.style.display='none'" /><div class="clc-name">ISP</div>
+                </div>
+                <div class="clc rv"><img src="images/GT Logo.png" class="clc-img real-img" alt="GT Manufacturing" onerror="this.style.display='none'" /><div class="clc-name" style="font-size:13px;color:var(--muted)">GT Manufacturing</div>
+            </div>
+               <div class="clc rv d1"><img src="images/NG Logo.jpg" class="clc-img real-img" alt="National Group" onerror="this.style.display='none'" /><div class="clc-name" style="font-size:13px;color:var(--muted)">National Group</div>
+            </div>
+                <div class="clc rv d2"><img src="images/og-image.jpg" class="clc-img real-img" alt="Supreme Plastics" onerror="this.style.display='none'" /><div class="clc-name" style="font-size:13px;color:var(--muted)">Supreme Plastics</div>
+            </div>
+                <div class="clc rv d3"><img src="images/Kissan Konnect Logo.png" class="clc-img real-img" alt="Kisan Konnect" onerror="this.style.display='none'" /><div class="clc-name" style="font-size:13px;color:var(--muted)">Kisan Konnect</div>
+            </div>
+                <div class="clc rv"><img
+                        src="data:image/jpeg;base64,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"
+                        class="clc-img real-img" alt="Nippon Steel" />
+                    <div class="clc-name">Nippon Steel</div>
+                </div>
+                <div class="clc rv d1"><img
+                        src="data:image/jpeg;base64,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"
+                        class="clc-img real-img" alt="OneGene" />
+                    <div class="clc-name">OneGene</div>
+                </div>
+                <div class="clc rv d2"><img
+                        src="data:image/jpeg;base64,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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACAAMAAAAQ888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888880xCyE288888888888888888888888888888888888888889wgrga2ow88888888888888888888888888888888888888wrVP888ePy38888888888888888888888888888888888888okSINPPe/e38+FNNd9888887NNNS988888888888888888868k+4iBG9UxH8+R//AP8Arzzzzz6j+9RXzzzzzzzzzzzzzzzzzz/wH6gICfBb2r74Xf8AMqwlC3o2uCCezSs6888888888888888+Es+/+++qf0R/+Rc8trD8eWm8o/8A8dCbpfPPPPPPPPPPPPPPPPcMZBDnA2ZDPPuffPKs/PBv+AQQR/HV5PPPPPPPPPPPPPPPPGOFvn/LOA/ivPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPHpoftIOSLPvPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPBe6pMHfPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPLfDHvPP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"
+                        class="clc-img real-img" alt="PreBo" />
+                    <div class="clc-name">PreBo</div>
+                </div>
+                <div class="clc rv d3"><img src="images/Dantech Dental Lab.webp" class="clc-img real-img" alt="Dantech Dental Lab" onerror="this.style.display='none'" /><div class="clc-name" style="font-size:13px;color:var(--muted)">Dantech Dental Lab</div>
+            </div>
+            <div class="clc rv" style="grid-column: 1 / -1; width: 280px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; align-items: center; text-align: center;"><img src="images\Pro Connect.jpg" class="clc-img real-img" alt="Pro Connect" /><div class="clc-name">ProConnect</div>
+        </div>
+     </div>
+    </div>
+    </section>
+
+    <!-- PRESENCE -->
+    <section id="presence">
+        <div class="mw">
+            <div class="pres-hdr rv">
+                <div class="ey c">Our Reach</div>
+                <h2 class="h2" style="text-align:center">Pan India <strong>Presence</strong></h2>
+                <div class="bar c"></div>
+                <p style="color:var(--muted);font-size:13.5px">Strategically present across India's key employment and
+                    industrial hubs.</p>
+            </div>
+            <div class="states-g rv">
+                <div class="stc">
+                    <div class="st-em">🌴</div>
+                    <div class="st-nm">Tamil Nadu</div>
+                </div>
+                <div class="stc">
+                    <div class="st-em">🏯</div>
+                    <div class="st-nm">Karnataka</div>
+                </div>
+                <div class="stc">
+                    <div class="st-em">🌆</div>
+                    <div class="st-nm">Maharashtra</div>
+                </div>
+                <div class="stc">
+                    <div class="st-em">🌾</div>
+                    <div class="st-nm">Andhra Pradesh</div>
+                </div>
+                <div class="stc">
+                    <div class="st-em">💎</div>
+                    <div class="st-nm">Telangana</div>
+                </div>
+                <div class="stc">
+                    <div class="st-em">🏛️</div>
+                    <div class="st-nm">New Delhi</div>
+                </div>
+            </div>
+            <div class="pan-box rv">
+                <p><strong>Hiring across Pan India</strong><br />Active operational teams across 6 major states
+                    delivering consistent, reliable workforce solutions wherever your business operates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section id="testimonial">
+        <div class="test-bg-q">"</div>
+        <div class="mw">
+            <div class="ey c rv">Client Voice</div>
+            <div class="test-w rv">
+                <div class="test-q">"</div>
+                <p class="test-txt">Infinite Hunters has been an outstanding staffing partner. Their team delivered
+                    exactly the right people — background verified, culturally aligned, and ready to contribute from day
+                    one. The speed and professionalism was truly exceptional.</p>
+                <div class="test-auth">Operations Head — Leading eCommerce Company</div>
+                <div class="test-sub">Staffing Partner since 2021</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLY BANNER -->
+    <div class="apply-b">
+        <h3>Are You a <strong>Job Seeker?</strong></h3>
+        <p>Infinite Hunters connects talented individuals with great career opportunities across India — blue collar,
+            white collar, and grey collar roles.</p>
+        <div class="apply-btns"><a href="mailto:Surya@infinitehunters.in" class="btn-g">Apply Here →</a><a
+                href="#contact" class="btn-gh">Talk to a Recruiter</a></div>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="mw cg-wrap">
+            <div class="ci rv">
+                <div class="ey">Get In Touch</div>
+                <h2>Let's Build Your <strong>Dream Team</strong></h2>
+                <div class="bar"></div>
+                <p>Whether you need contract staff, RPO, payroll management, NAPS, or compliance support — our team will
+                    design a solution precisely tailored to your business.</p>
+                <div class="clinks">
+                    <a href="tel:+916380352731" class="clink">
+                        <div class="clink-ico">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 6380 352 731</p>
+                        </div>
+                    </a>
+                    <a href="mailto:Surya@infinitehunters.in" class="clink">
+                        <div class="clink-ico">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Surya@infinitehunters.in</p>
+                        </div>
+                    </a>
+                    <a href="https://infinitehunters.co" target="_blank" class="clink">
+                        <div class="clink-ico">🌐</div>
+                        <div>
+                            <h4>Website</h4>
+                            <p>infinitehunters.co</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="cf rv d2">
+                <h3>Send Us a Message</h3>
+                <form onsubmit="submitForm(event)">
+                    <div class="frow">
+                        <div class="fg"><label>Your Name</label><input type="text" name="fname" placeholder="Surya S"
+                                required /></div>
+                        <div class="fg"><label>Company</label><input type="text" name="company"
+                                placeholder="Company name" /></div>
+                    </div>
+                    <div class="fg"><label>Email Address</label><input type="email" name="email"
+                            placeholder="you@company.com" required /></div>
+                    <div class="fg"><label>Phone Number</label><input type="tel" name="phone"
+                            placeholder="+91 00000 00000" /></div>
+                    <div class="fg"><label>Service Interested In</label>
+                        <select name="service">
+                            <option value="">Select a service...</option>
+                            <option>Temporary / Contract Staffing</option>
+                            <option>Facility Management &amp; Housekeeping</option>
+                            <option>Permanent Recruitment &amp; RPO</option>
+                            <option>Enterprise RPO</option>
+                            <option>Project RPO</option>
+                            <option>Payroll Solutions</option>
+                            <option>NAPS – Apprenticeship Scheme</option>
+                            <option>Statutory Compliance Services</option>
+                            <option>Job Seeker / Apply for a Role</option>
+                        </select>
+                    </div>
+                    <div class="fg"><label>Message</label><textarea name="message"
+                            placeholder="Tell us about your hiring needs…"></textarea></div>
+                    <button type="submit" class="fsub" id="submitBtn">Send Message →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="ft-g">
+            <div class="ft-brand">
+                <div style="display:flex;align-items:center;;gap:9px">
+                    <div
+                        style="width:38px;height:38px;border-radius:7px;overflow:hidden;background:linear-gradient(135deg,#c9a84c,#e8c97a);padding:2px;flex-shrink:0";display:flex;align-items:center;justify-content:center;>
+                        <img src="https://logo.clearbit.com/infinitehunters.co"
+                            style="width:100%;height:100%;object-fit:contain"
+                            onerror="this.parentElement.innerHTML='<div style=&quot;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-weight:bold;&quot;>IH</div>'">
+                    </div>
+                    <div
+                        style="font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;color:var(--white);line-height:1.2">
+                        Infinite Hunters<br /><span
+                            style="font-size:9px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif">Multi
+                            Service Pvt Ltd</span></div>
+                </div>
+                <p>Premier human resource mobility solutions provider connecting businesses with the right talent across
+                    Pan India since 2021. Blue collar, white collar, grey collar — we cover it all.</p>
+                <div class="ft-soc">
+    <!-- LinkedIn -->
+    <a href="https://in.linkedin.com/company/infinite-hunters-multi-service-pvt-ltd" class="soc" title="LinkedIn" target="_blank" rel="noopener">in</a>
+    
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/p/Infinite-Hunters-Multi-Service-Pvt-Ltd-61552143164318/" class="soc" title="Facebook" target="_blank" rel="noopener">f</a>
+    
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/_infinitehunters?igsh=N2swZXIwNTByd3c0" class="soc" title="Instagram" target="_blank" rel="noopener">ig</a>
+    
+    <!-- Removed Twitter -->
+</div>
+            </div>
+            <div class="ft-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#solutions">Contract Staffing</a></li>
+                    <li><a href="#solutions">Facility Management</a></li>
+                    <li><a href="#solutions">Permanent Recruitment</a></li>
+                    <li><a href="#solutions">RPO Solutions</a></li>
+                    <li><a href="#solutions">Payroll Solutions</a></li>
+                    <li><a href="#naps">NAPS Apprenticeship</a></li>
+                    <li><a href="#solutions">Statutory Compliance</a></li>
+                </ul>
+            </div>
+            <div class="ft-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#vision">Vision &amp; Mission</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#clients">Our Clients</a></li>
+                    <li><a href="#presence">Our Presence</a></li>
+                    <li><a href="#roles">Apply Here</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="ft-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+916380352731">+91 6380 352 731</a></li>
+                    <li><a href="mailto:Surya@infinitehunters.in">Surya@infinitehunters.in</a></li>
+                    <li><a href="https://infinitehunters.co" target="_blank">infinitehunters.co</a></li>
+                </ul>
+                <div style="margin-top:16px">
+    <div style="font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px">
+        Present In
+    </div>
+
+    <!-- THIS IS WHERE YOU MODIFY -->
+    <div style="margin-top:16px">
+    <div style="font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px">
+        Present In
+    </div>
+
+    <div style="font-size:11.5px;color:var(--muted);line-height:1.85">
+        Tamil Nadu · Karnataka<br />
+        Maharashtra · Andhra Pradesh<br />
+        Telangana · New Delhi<br /><br />
+        Infinite Hunters Multi Service Pvt Ltd,<br />
+        Plot No. 20, G1, Kaveri Flats,<br />
+        15th Main Road, Anna Nagar, Chennai – 600040,<br />
+        Tamil Nadu, India.
+    </div>
+</div>
+
+</div>
+            </div>
+        </div>
+        <div class="ft-bot">
+            <div class="ft-copy">© 2025 Infinite Hunters Multi Service Pvt Ltd. All rights reserved.</div>
+            <div class="ft-pol"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a
+                    href="#">Sitemap</a></div>
+        </div>
+    </footer>
+
+    <!-- SERVICE MODALS -->
+    <div class="svc-ov" id="m-contract" onclick="if(event.target===this)closeModal('m-contract')">
+        <div class="svc-m">
+            <button class="svc-mc" onclick="closeModal('m-contract')">✕</button>
+            <div class="svc-m-icon">👔</div>
+            <div class="svc-m-badge">Service Details</div>
+            <h2>Temporary &amp; Contract Staffing</h2>
+            <p class="svc-m-desc">Our contract staffing solution provides fully verified, skilled manpower for any
+                duration — from short-term peak coverage to long-term operational support. We run a proven onsite
+                delivery model that ensures rapid deployment with minimal disruption to your operations.</p>
+            <ul class="svc-m-list">
+                <li><strong>Pan India deployment</strong> — candidates sourced, verified, and deployed across all 6
+                    operational states</li>
+                <li><strong>Onsite delivery model</strong> — our team works from your facility floor for faster
+                    management and resolution</li>
+                <li><strong>Background verification</strong> — every placement is police-verified, reference-checked,
+                    and fully documented</li>
+                <li><strong>All collar segments</strong> — warehouse staff, delivery executives, sales teams,
+                    supervisors, admin staff</li>
+                <li><strong>Rapid turnaround</strong> — typical industrial &amp; logistics roles filled within 48–72
+                    hours of requirement</li>
+                <li><strong>Full payroll under IH banner</strong> — we handle salary, compliance, and statutory filings
+                    for all deployed staff</li>
+                <li><strong>Replacement guarantee</strong> — immediate replacement in case of attrition or absence, no
+                    loss to productivity</li>
+            </ul>
+            <div class="svc-m-tags"><span class="svc-m-tag">Blue Collar</span><span class="svc-m-tag">White
+                    Collar</span><span class="svc-m-tag">Grey Collar</span><span class="svc-m-tag">Pan India</span><span
+                    class="svc-m-tag">Onsite Model</span></div>
+            <a href="#contact" class="btn-g" onclick="closeModal('m-contract')"
+                style="display:block;text-align:center;width:100%">Get a Quote →</a>
+        </div>
+    </div>
+
+    <div class="svc-ov" id="m-rpo" onclick="if(event.target===this)closeModal('m-rpo')">
+        <div class="svc-m">
+            <button class="svc-mc" onclick="closeModal('m-rpo')">✕</button>
+            <div class="svc-m-icon">🔎</div>
+            <div class="svc-m-badge">Service Details</div>
+            <h2>Permanent Recruitment &amp; RPO</h2>
+            <p class="svc-m-desc">We act as a direct extension of your talent acquisition team — solving internal
+                recruiting bandwidth constraints, driving more effective hiring, and reducing cost-per-hire. Available
+                in three flexible RPO models to match your exact business stage.</p>
+            <ul class="svc-m-list">
+                <li><strong>Enterprise RPO</strong> — full accountability of your entire talent acquisition function,
+                    end-to-end</li>
+                <li><strong>Project RPO</strong> — scoped for a business unit, new location launch, or one-time team
+                    scale-up</li>
+                <li><strong>Task RPO</strong> — outsource specific stages only: sourcing, screening, scheduling, or
+                    onboarding</li>
+                <li><strong>Workforce planning</strong> — we deconstruct roles, define success metrics, and build
+                    sourcing strategy</li>
+                <li><strong>Multi-channel sourcing</strong> — job boards, social media, referrals, and proprietary
+                    talent database</li>
+                <li><strong>Domain specialist recruiters</strong> — dedicated recruiters with your industry's functional
+                    knowledge</li>
+                <li><strong>90-day engagement support</strong> — post-placement follow-up to ensure integration and
+                    retention</li>
+            </ul>
+            <div class="svc-m-tags"><span class="svc-m-tag">Enterprise RPO</span><span class="svc-m-tag">Project
+                    RPO</span><span class="svc-m-tag">Leadership Hiring</span><span class="svc-m-tag">Bulk Hiring</span>
+            </div>
+            <a href="#contact" class="btn-g" onclick="closeModal('m-rpo')"
+                style="display:block;text-align:center;width:100%">Discuss RPO →</a>
+        </div>
+    </div>
+
+    <div class="svc-ov" id="m-facility" onclick="if(event.target===this)closeModal('m-facility')">
+        <div class="svc-m">
+            <button class="svc-mc" onclick="closeModal('m-facility')">✕</button>
+            <div class="svc-m-icon">🏢</div>
+            <div class="svc-m-badge">Service Details</div>
+            <h2>Facility Management &amp; Housekeeping</h2>
+            <p class="svc-m-desc">We deploy trained, professionally managed facility staff — cleaners, security
+                personnel, pantry services, and general housekeeping — fully supervised under the Infinite Hunters
+                banner so you manage outcomes, not individuals.</p>
+            <ul class="svc-m-list">
+                <li><strong>Trained housekeeping staff</strong> — commercial and industrial premises across all deployed
+                    states</li>
+                <li><strong>Security personnel</strong> — uniformed, verified guards deployed with shift roster
+                    management</li>
+                <li><strong>Pantry &amp; cafeteria staff</strong> — managed end-to-end including supplies coordination
+                    on your behalf</li>
+                <li><strong>Monthly performance reports</strong> — attendance, performance, and compliance reports
+                    provided</li>
+                <li><strong>Quick replacement guarantee</strong> — absent staff replaced within 4 working hours, no loss
+                    to operations</li>
+                <li><strong>Statutory compliance covered</strong> — all labour law obligations managed by Infinite
+                    Hunters</li>
+                <li><strong>Customised deployment</strong> — part-time, full-time, or shift-based as per your
+                    operational needs</li>
+            </ul>
+            <div class="svc-m-tags"><span class="svc-m-tag">Housekeeping</span><span
+                    class="svc-m-tag">Security</span><span class="svc-m-tag">Pantry</span><span class="svc-m-tag">Pan
+                    India</span></div>
+            <a href="#contact" class="btn-g" onclick="closeModal('m-facility')"
+                style="display:block;text-align:center;width:100%">Get Staffing Quote →</a>
+        </div>
+    </div>
+
+    <div class="svc-ov" id="m-payroll" onclick="if(event.target===this)closeModal('m-payroll')">
+        <div class="svc-m">
+            <button class="svc-mc" onclick="closeModal('m-payroll')">✕</button>
+            <div class="svc-m-icon">💰</div>
+            <div class="svc-m-badge">Service Details</div>
+            <h2>Payroll Solutions</h2>
+            <p class="svc-m-desc">We take complete ownership of your payroll function — accurate, on-time, and fully
+                compliant with every labour law applicable to your state and industry. No errors, no delays, and zero
+                compliance risk for your business.</p>
+            <ul class="svc-m-list">
+                <li><strong>Monthly salary processing</strong> — accurate computation including CTC, gross, net, and all
+                    deductions</li>
+                <li><strong>PF &amp; ESI management</strong> — monthly filings, remittances, and annual returns handled
+                    completely</li>
+                <li><strong>Professional Tax (PT)</strong> — state-wise PT computation, remittance, and returns managed
+                </li>
+                <li><strong>Labour Welfare Fund (LWF)</strong> — bi-annual LWF deductions and remittances handled on
+                    time</li>
+                <li><strong>TDS &amp; Form 16</strong> — TDS deduction, challan payment, quarterly returns, and Form 16
+                    issuance</li>
+                <li><strong>Labour law advisory</strong> — proactive alerts on all legislative changes affecting your
+                    payroll</li>
+                <li><strong>Payslip management</strong> — digital payslip generation and distribution to all employees
+                </li>
+            </ul>
+            <div class="svc-m-tags"><span class="svc-m-tag">PF &amp; ESI</span><span class="svc-m-tag">TDS</span><span
+                    class="svc-m-tag">LWF &amp; PT</span><span class="svc-m-tag">Full Compliance</span></div>
+            <a href="#contact" class="btn-g" onclick="closeModal('m-payroll')"
+                style="display:block;text-align:center;width:100%">Outsource Payroll →</a>
+        </div>
+    </div>
+
+    <div class="svc-ov" id="m-naps" onclick="if(event.target===this)closeModal('m-naps')">
+        <div class="svc-m">
+            <button class="svc-mc" onclick="closeModal('m-naps')">✕</button>
+            <div class="svc-m-icon">🎓</div>
+            <div class="svc-m-badge">Service Details</div>
+            <h2>NAPS Apprenticeship Programme</h2>
+            <p class="svc-m-desc">The National Apprenticeship Promotion Scheme (NAPS) was launched by the Government of
+                India in 2016 to boost skilled apprenticeships in the service sector. Employers receive 25% of the
+                stipend reimbursed, up to ₹1,500/month per apprentice. We handle everything.</p>
+            <ul class="svc-m-list">
+                <li><strong>Candidate sourcing</strong> — we identify ITI, diploma and graduate candidates for your
+                    trade requirements</li>
+                <li><strong>BOAT/MHRD portal registration</strong> — all documentation and portal submissions handled by
+                    our team</li>
+                <li><strong>Basic Training (BT) delivery</strong> — structured 200+ hour BT through empanelled
+                    institutes</li>
+                <li><strong>Stipend management</strong> — monthly calculation, disbursement, and government claim
+                    reimbursement</li>
+                <li><strong>Document compliance</strong> — log books, attendance registers, and audit submissions
+                    maintained</li>
+                <li><strong>Government liaison</strong> — direct communication with Apprenticeship Advisers on your
+                    behalf</li>
+                <li><strong>Cost reduction</strong> — significantly lower manpower cost vs regular employees with full
+                    skill benefit</li>
+            </ul>
+            <div class="svc-m-tags"><span class="svc-m-tag">NAPS</span><span class="svc-m-tag">₹1,500/month
+                    Incentive</span><span class="svc-m-tag">Training Included</span><span class="svc-m-tag">Govt
+                    Liaison</span></div>
+            <a href="#contact" class="btn-g" onclick="closeModal('m-naps')"
+                style="display:block;text-align:center;width:100%">Start NAPS Programme →</a>
+        </div>
+    </div>
+
+    <div class="svc-ov" id="m-compliance" onclick="if(event.target===this)closeModal('m-compliance')">
+        <div class="svc-m">
+            <button class="svc-mc" onclick="closeModal('m-compliance')">✕</button>
+            <div class="svc-m-icon">⚖️</div>
+            <div class="svc-m-badge">Service Details</div>
+            <h2>Statutory Compliance Services</h2>
+            <p class="svc-m-desc">Non-compliance with labour laws can result in heavy penalties and serious legal
+                exposure. Our dedicated compliance team manages all your statutory obligations so your business stays
+                fully protected and audit-ready at all times — across all states of operation.</p>
+            <ul class="svc-m-list">
+                <li><strong>Factory &amp; Shops Act registration</strong> — new registrations and renewals handled
+                    state-wise</li>
+                <li><strong>Labour registers maintenance</strong> — Form A, B, C, D, muster rolls, wage registers — all
+                    maintained</li>
+                <li><strong>Contract Labour (R&amp;A) Act</strong> — principal employer and contractor compliance
+                    managed</li>
+                <li><strong>Annual return filings</strong> — all required annual returns filed before due dates, no
+                    penalties</li>
+                <li><strong>Minimum wages advisory</strong> — state-wise minimum wage updates and implementation support
+                </li>
+                <li><strong>Audit &amp; inspection support</strong> — we represent and assist you during Labour
+                    Department inspections</li>
+                <li><strong>Multi-state compliance</strong> — single-point management of compliance obligations across
+                    all your states</li>
+            </ul>
+            <div class="svc-m-tags"><span class="svc-m-tag">Labour Law</span><span class="svc-m-tag">Returns
+                    Filing</span><span class="svc-m-tag">Audit Ready</span><span class="svc-m-tag">Multi-State</span>
+            </div>
+            <a href="#contact" class="btn-g" onclick="closeModal('m-compliance')"
+                style="display:block;text-align:center;width:100%">Get Compliance Support →</a>
+        </div>
+    </div>
+
+    <!-- AI CHAT -->
+    <button class="c-fab" id="chatFab" title="Chat with IH Assistant">💬</button>
+    <div class="c-box" id="chatBox">
+        <div class="c-head">
+            <div class="c-av">🤖</div>
+            <div class="c-hi">
+                <h4>IH Assistant</h4>
+                <p>Online · Powered by AI</p>
+            </div>
+        </div>
+        <div class="c-msgs" id="chatMsgs">
+            <div class="msg bot">👋 Hi! I'm the Infinite Hunters AI Assistant. Ask me anything about our staffing
+                services, RPO, NAPS, payroll, or how to apply for a job!</div>
+        </div>
+        <div class="c-quick" id="quickBtns">
+            <button class="qb" onclick="qAsk('What services do you offer?')">Services</button>
+            <button class="qb" onclick="qAsk('Tell me about RPO')">RPO</button>
+            <button class="qb" onclick="qAsk('What is NAPS?')">NAPS</button>
+            <button class="qb" onclick="qAsk('How do I apply for a job?')">Apply</button>
+            <button class="qb" onclick="qAsk('Which states are you present in?')">Presence</button>
+        </div>
+        <div class="c-inp-row">
+            <input class="c-inp" id="chatInp" type="text" placeholder="Ask about Infinite Hunters…"
+                onkeydown="if(event.key==='Enter')sendMsg()" />
+            <button class="c-send" onclick="sendMsg()">➤</button>
+        </div>
+    </div>
+
+    <script>
+        // ── ALERT POPUP ──
+        (function () {
+            var ov = document.getElementById('alertOv');
+            if (!ov) { return; }
+            // Lock scroll while popup is visible
+            document.body.style.overflow = 'hidden';
+            function closeAlert() {
+                ov.style.transition = 'opacity .3s ease';
+                ov.style.opacity = '0';
+                ov.style.pointerEvents = 'none';
+                setTimeout(function () {
+                    ov.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 320);
+            }
+            var cl = document.getElementById('alertClose');
+            var dm = document.getElementById('alertDismiss');
+            if (cl) { cl.onclick = function (e) { e.stopPropagation(); closeAlert(); }; }
+            if (dm) { dm.onclick = function (e) { e.stopPropagation(); closeAlert(); }; }
+            ov.addEventListener('click', function (e) { if (e.target === ov) closeAlert(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAlert(); });
+        })();
+
+        // ── SCROLL REVEAL ──
+        (function () {
+            var o = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+            }, { threshold: 0.08 });
+            document.querySelectorAll('.rv').forEach(function (el) { o.observe(el); });
+        })();
+
+        // ── NAV SHADOW ──
+        window.addEventListener('scroll', function () {
+            var nav = document.getElementById('mainNav');
+            if (nav) nav.style.boxShadow = window.scrollY > 60 ? '0 4px 26px rgba(0,0,0,.42)' : 'none';
+        });
+
+        // ── SMOOTH LINKS ──
+        document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                var t = document.querySelector(a.getAttribute('href'));
+                if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+
+        // ── SERVICE MODALS ──
+        function openModal(id) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            el.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            el.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.svc-ov.open').forEach(function (m) { m.classList.remove('open'); });
+                document.body.style.overflow = '';
+            }
+        });
+
+        // ── CONTACT FORM → EMAIL ──
+        function submitForm(e) {
+            e.preventDefault();
+            var form = e.target;
+            var name = form.fname.value;
+            var company = form.company.value;
+            var email = form.email.value;
+            var phone = form.phone.value;
+            var service = form.service.value;
+            var message = form.message.value;
+            var sub = encodeURIComponent('Enquiry from ' + name + (company ? ' (' + company + ')' : ''));
+            var body = encodeURIComponent('Name: ' + name + '\nCompany: ' + company + '\nEmail: ' + email + '\nPhone: ' + phone + '\nService: ' + service + '\n\nMessage:\n' + message);
+            window.location.href = 'mailto:Surya@infinitehunters.in?subject=' + sub + '&body=' + body;
+            var btn = document.getElementById('submitBtn');
+            btn.textContent = '✓ Opening your email client...';
+            btn.style.background = 'linear-gradient(135deg,#4caf7d,#7fd4a3)';
+            setTimeout(function () { btn.textContent = 'Send Message →'; btn.style.background = ''; }, 4000);
+        }
+
+        // ── IH AI ASSISTANT (FIXED) ──
+        var chatFab = document.getElementById('chatFab');
+        var chatBox = document.getElementById('chatBox');
+        var chatMsgs = document.getElementById('chatMsgs');
+        var chatInp = document.getElementById('chatInp');
+        var quickDiv = document.getElementById('quickBtns');
+        var chatHistory = [];
+
+        var IH_SYSTEM = 'You are the AI assistant for Infinite Hunters Multi Service Pvt Ltd, a premier HR staffing and RPO company in India founded in 2021. Key facts: Services: Contract Staffing (blue/white/grey collar), Facility Management, Permanent Recruitment, Enterprise RPO, Project RPO, Task RPO, Payroll (PF,ESI,TDS,LWF,PT), NAPS Apprenticeship, Statutory Compliance. States: Tamil Nadu, Karnataka, Maharashtra, Andhra Pradesh, Telangana, New Delhi. 20+ clients including Swiggy, Zepto, Aditya Birla Capital, Shadowfax, Honicel, Nippon Steel Chemical & Material, OneGene, PreBo, Kisan Konnect, Dantech Dental Lab, ISP, GT Manufacturing, National Group, Supreme Plastics. Contact: Surya S, Surya@infinitehunters.in, +91 6380 352 731. We NEVER charge candidates for jobs. Keep answers warm, professional, and concise (2-4 sentences).';
+
+        if (chatFab) {
+            chatFab.addEventListener('click', function () {
+                var isOpen = chatBox.classList.toggle('open');
+                chatFab.classList.toggle('open', isOpen);
+                chatFab.textContent = isOpen ? '✕' : '💬';
+                if (isOpen && chatInp) chatInp.focus();
+            });
+        }
+
+        function addChatMsg(txt, role) {
+            var d = document.createElement('div');
+            d.className = 'msg ' + role;
+            d.textContent = txt;
+            if (chatMsgs) { chatMsgs.appendChild(d); chatMsgs.scrollTop = chatMsgs.scrollHeight; }
+            return d;
+        }
+
+        function showTypingIndicator() {
+            var d = document.createElement('div');
+            d.className = 'msg typing';
+            d.id = 'typingMsg';
+            d.innerHTML = '<div class="t-dots"><span></span><span></span><span></span></div>';
+            if (chatMsgs) { chatMsgs.appendChild(d); chatMsgs.scrollTop = chatMsgs.scrollHeight; }
+            return d;
+        }
+
+        async function sendMsg() {
+            if (!chatInp) return;
+            var txt = chatInp.value.trim();
+            if (!txt) return;
+            chatInp.value = '';
+            if (quickDiv) quickDiv.style.display = 'none';
+            addChatMsg(txt, 'user');
+            chatHistory.push({ role: 'user', content: txt });
+            var typing = showTypingIndicator();
+            try {
+                var resp = await fetch('https://api.anthropic.com/v1/messages', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'anthropic-version': '2023-06-01',
+                        'anthropic-dangerous-direct-browser-access': 'true'
+                    },
+                    body: JSON.stringify({
+                        model: 'claude-haiku-4-5-20251001',
+                        max_tokens: 300,
+                        system: IH_SYSTEM,
+                        messages: chatHistory
+                    })
+                });
+                var data = await resp.json();
+                if (typing && typing.parentNode) typing.remove();
+                var reply = '';
+                if (data.content && data.content.length > 0) {
+                    reply = data.content[0].text || '';
+                }
+                if (!reply) reply = 'Happy to help! Contact Surya S at Surya@infinitehunters.in or call +91 6380 352 731.';
+                addChatMsg(reply, 'bot');
+                chatHistory.push({ role: 'assistant', content: reply });
+            } catch (err) {
+                if (typing && typing.parentNode) typing.remove();
+                addChatMsg('Having trouble connecting right now. Please reach Surya S at Surya@infinitehunters.in or +91 6380 352 731.', 'bot');
+                console.error('Chat error:', err);
+            }
+        }
+
+        function qAsk(q) {
+            if (chatInp) { chatInp.value = q; sendMsg(); }
+        }
+
+        if (chatInp) {
+            chatInp.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMsg(); }
+            });
+        }
+    </script>
+</body>
+
+</html>
